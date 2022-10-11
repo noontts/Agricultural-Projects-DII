@@ -1,4 +1,3 @@
-hbmnnmb,bjm.bnm.,m.
-;nkl;jkl;
-;;ljll
-k
+<php?
+echo "Srika was here!";
+?>
