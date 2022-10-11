@@ -1,3 +1,3 @@
-<?php
-    echo "KUYRAISAS"
+<php?
+echo "Srika was here!";
 ?>
