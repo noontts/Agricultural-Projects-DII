@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;400;700;900&display=swap');
+
+.mainContent{
+    margin:30px auto 0px auto ;
+    width: 950px;
+    height: 650px;
+}
+.box{
+    margin:30px auto 0px auto ;
+    width: 950px;
+    height: 550px;
+    background-color: #EBEBEB;
+}
+.navbar{
+    text-align: right;
+}
+.lanSelect{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; text-anchor: middle;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    margin: 0px 0px 0px 20px ;
+    cursor: pointer;
+}
+
+#EN{
+    background-color: #04AA6D;
+    background-image: url("/Agricultural-Projects-DII/Picture/EngLan.png");
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#TH{
+    background-color: #04AA6D;
+    background-image: url("/Agricultural-Projects-DII/Picture/ThaiLan.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.row{
+    float: left;
+    margin: 0px 0px 0px 0px;
+}
+#TEXTBOX{
+    text-align: justify;
+}
+.row h1 {
+    font-family: 'Prompt', sans-serif;
+    margin: 80px 0px 15px 55px;
+}
+.Login{
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+    margin: 30px 0px 0px 55px;
+    opacity: 70%;
+}
+.Login .part2{
+    margin: 20px 0px 0px 0px;
+}
+.part1 p{
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+    margin: 0px 0px 0px 85px;
+    opacity: 70%;
+}
+#loginInput{
+    width: 375px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    background-color: #D9D9D9;
+}
+.Login button{
+    margin: 40px 0px 0px 0px ;
+    text-align: center;
+    transition: 0.4s;
+    width: 380px;
+    height: 55px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 36px;
+    font-weight:bold;
+    cursor: pointer;
+}
+.Submit{
+    border-radius: 8px;
+    border: none;
+    background-color: #929292;
+}
+.Submit:hover{
+    background-color: #474747;
+    color: white;
+}
+.carousel-five-images{
+  position: relative;
+  top: 0px;
+  left: 0%;
+  /* Can be anything, but must be defined */
+}
+.carousel-five-images img {
+  width: 475px;
+  height: 550px;
+}
+.carousel-five-images .changing {
+	position:absolute;
+	opacity:0;
+	top:0;
+	left:0;
+}
+/*Animate time*/
+.carousel-five-images .two{
+	animation:animate-five-two 15s infinite forwards linear;
+}
+.carousel-five-images .three{
+	animation:animate-five-three 15s infinite forwards linear;
+}
+.carousel-five-images .four{
+	animation:animate-five-four 15s infinite forwards linear;
+}
+.carousel-five-images .five{
+	animation:animate-five-five 15s infinite forwards linear;
+}
+/*animate part*/
+@keyframes animate-five-two
+{
+    0%	{opacity:0;}
+    15% {opacity:0;}
+    20% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-five-three
+{
+    0% {opacity:0;}
+    35% {opacity:0;}
+    40% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-five-four
+{
+    0% {opacity:0;}
+    55% {opacity:0;}
+    60% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-five-five
+{
+    0% {opacity:0;}
+    75% {opacity:0;}
+    80% {opacity:1;}
+    95% {opacity:1;}
+    100% {opacity:0;}
+}
