@@ -117,16 +117,16 @@
 }
 /*Animate time*/
 .carousel-five-images .two{
-	animation:animate-five-two 15s infinite forwards linear;
+	animation:animate-five-two 12s infinite forwards linear;
 }
 .carousel-five-images .three{
-	animation:animate-five-three 15s infinite forwards linear;
+	animation:animate-five-three 12s infinite forwards linear;
 }
 .carousel-five-images .four{
-	animation:animate-five-four 15s infinite forwards linear;
+	animation:animate-five-four 12s infinite forwards linear;
 }
 .carousel-five-images .five{
-	animation:animate-five-five 15s infinite forwards linear;
+	animation:animate-five-five 12s infinite forwards linear;
 }
 /*animate part*/
 @keyframes animate-five-two

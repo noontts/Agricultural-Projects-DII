@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;400;700;900&display=swap');
+
+.mainContent{
+    margin:30px auto 0px auto ;
+    width: 950px;
+    height: 650px;
+}
+.box{
+    margin:30px auto 0px auto ;
+    width: 950px;
+    height: 550px;
+    background-color: #EBEBEB;
+}
+.navbar{
+    text-align: right;
+}
+.lanSelect{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; text-anchor: middle;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    margin: 0px 0px 0px 20px ;
+    cursor: pointer;
+}
+#EN{
+    background-color: #04AA6D;
+    background-image: url("/Picture/EngLan.png");
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#TH{
+    background-color: #04AA6D;
+    background-image: url("/Picture/ThaiLan.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.row{
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+.select button{
+    margin: 20px 0px 0px 20px;
+    display: block;
+}
+.Farmer{
+    margin: 0px 0px 0px 0px ;
+    text-align: center;
+    transition: 0.4s;
+    width: 445px;
+    height: 245px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    border: none;
+    background-image: url("/Picture/pic1.jpg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Farmer:hover{
+    opacity: 50%;
+    background-size: 160%;
+    border: 3px solid #434343;
+}
+.Farmer:hover::after{
+    content: attr(data-hover1);
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.Organize{
+    margin: 0px 0px 0px 0px ;
+    text-align: center;
+    transition: 0.4s;
+    width: 445px;
+    height: 245px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    border: none;
+    background-image: url("/Picture/pic5.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Organize:hover{
+    opacity: 50%;
+    background-size: 130%;
+    border: 3px solid #434343;
+}
+.Organize:hover::after{
+    content: attr(data-hover2);
+    font-size: 18px;
+    font-weight:bold;
+}
+.display{
+    width: 400px;
+    height: 50px;
+    margin: 35px 0px 0px 30px;
+    text-align: center;
+    transition: 0.4s;
+    font-family: 'Prompt', sans-serif;
+    background-color: #D9D9D9;
+    border: none;
+}
+
+#TEXTBOX{
+    text-align: justify;
+}
+.row h1 {
+    font-size: 32px;
+    font-family: 'Prompt', sans-serif;
+    margin: 80px 0px 0px 65px;
+    text-align: center;
+}
+.row .part1{
+    margin: 0px 0px 0px 0px;
+    
+}
+.row .part2{
+    margin: 30px 0px 0px 0px;
+    
+}
+.row .part3{
+    margin: 50px 0px 0px 0px;
+}
+.part1 label{
+    font-family: 'Prompt', sans-serif;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    opacity: 70%;
+}
+
+.row .part1,.part2 p{
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+    text-align:center;
+    margin: 0px 0px 0px 30px;
+    opacity: 70%;
+
+}
+#TextBold{
+    font-weight: bold;
+}
+
+#loginInput{
+    width: 375px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    background-color: #D9D9D9;
+}
+.part3 form,a{
+    margin: 10px 0px 0px 0px;
+    text-decoration: none;
+    color: white;
+}
+
+.Submit{
+    margin: 0px 0px 0px 40px ;
+    text-align: center;
+    transition: 0.4s;
+    width: 380px;
+    height: 55px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 36px;
+    font-weight:bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #929292;
+}
+.Submit:hover{
+    background-color: #474747;
+    color: white;
+}
