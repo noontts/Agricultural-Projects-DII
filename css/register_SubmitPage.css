@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;400;700;900&display=swap');
+
+.mainContent{
+    margin:30px auto 0px auto ;
+    width: 950px;
+    height: 650px;
+}
+.box{
+    margin:30px auto 0px auto ;
+    width: 950px;
+    height: 550px;
+    background-color: #EBEBEB;
+}
+.navbar{
+    text-align: right;
+}
+.lanSelect{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; text-anchor: middle;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    margin: 0px 0px 0px 20px ;
+    cursor: pointer;
+}
+#EN{
+    background-color: #04AA6D;
+    background-image: url("/Picture/EngLan.png");
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#TH{
+    background-color: #04AA6D;
+    background-image: url("/Picture/ThaiLan.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box .title{
+    margin: 0px 0px 0px 0px ;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+.box .title p{
+    position: relative;
+    bottom: 20px;
+}
+.box .body{
+    margin: 0px 0px 0px 0px ;
+    padding: 0px 0px 0px 0px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.box .body .container{
+    float: left;
+}
+#Text input{
+    margin: 20px 0px 0px 45px ;
+    border-radius: 8px;
+    width: 400px;
+    height: 35px;
+}
+#Text label{
+    position: relative;
+    left:45px;
+    top: 15px;
+}
+#Text2 input{
+    margin: 20px 0px 0px 5px ;
+    width: 212px;
+    height: 35px;
+    border-radius: 8px;
+}
+#Mail input{
+    margin: 20px 0px 0px 45px ;
+    border-radius: 8px;
+    width: 852px;
+    height: 35px;
+}
+#Mail label{
+    position: relative;
+    left:45px;
+    top: 15px;
+}
+
+#Submit label{
+    position: relative;
+    top: 20px;
+    left: 240px;
+    border-radius: 8px;
+    width: 850px;
+    height: 35px;
+    color: red;
+
+}
+
+.Submit{
+    margin: 40px 0px 0px 275px ;
+    text-align: center;
+    transition: 0.4s;
+    width: 380px;
+    height: 55px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 36px;
+    font-weight:bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #929292;
+}
+.Submit:hover{
+    background-color: #474747;
+    color: white;
+}
+
+

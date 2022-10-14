@@ -33,7 +33,7 @@
                 </div>
                 <div class="part3">
                     <form>
-                        <button class="Submit" ><a href="/RegisterPage_Submit.html">ต่อไป</a></button>
+                        <button class="Submit"><a id="RegSubmit" href="">ต่อไป</a></button>
                     </form>
                     <form>
                         <button class="Submit" ><a href="/LoginPage.html">กลับ</a></button>
@@ -46,11 +46,14 @@
         function displayUserSelectFunction1() {
             var x = document.getElementById("Organize").value;
             document.getElementById("demo").innerHTML = "คุณได้เลือกบัญชีเกษตรกร " + x;
+            document.getElementById("RegSubmit").href = "Register_SubmitPage(FARM).html";
         }
         function displayUserSelectFunction2() {
            var x = document.getElementById("Farmer").value;
            document.getElementById("demo").innerHTML = "คุณได้เลือกบัญชีองค์กร " + x;
+           document.getElementById("RegSubmit").href = "Register_SubmitPage(OGANIZE).html";
         }
+
         </script>
     </div>
 </body>
