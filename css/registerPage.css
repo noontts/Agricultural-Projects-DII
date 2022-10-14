@@ -46,14 +46,13 @@
 }
 .row{
     float: left;
-    margin: 0px 10px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
-.select button{
-    margin: 20px 0px 0px 20px;
+.select button {
     display: block;
 }
-.Farmer{
-    margin: 0px 0px 0px 0px ;
+#Farmer{
+    margin: 25px 0px 0px 20px ;
     text-align: center;
     transition: 0.4s;
     width: 445px;
@@ -67,19 +66,19 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.Farmer:hover{
+#Farmer:hover{
     opacity: 50%;
     background-size: 160%;
     border: 3px solid #434343;
 }
-.Farmer:hover::after{
+#Farmer:hover::after{
     content: attr(data-hover1);
     font-size: 18px;
     font-weight:bold;
 }
 
-.Organize{
-    margin: 0px 0px 0px 0px ;
+#Organize{
+    margin: 10px 0px 0px 20px ;
     text-align: center;
     transition: 0.4s;
     width: 445px;
@@ -93,59 +92,59 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.Organize:hover{
+#Organize:hover{
     opacity: 50%;
     background-size: 130%;
     border: 3px solid #434343;
 }
-.Organize:hover::after{
+#Organize:hover::after{
     content: attr(data-hover2);
     font-size: 18px;
     font-weight:bold;
 }
+
 .display{
     width: 400px;
     height: 50px;
-    margin: 35px 0px 0px 30px;
-    text-align: center;
-    transition: 0.4s;
-    font-family: 'Prompt', sans-serif;
+    margin: 0px 0px 0px 30px;
     background-color: #D9D9D9;
     border: none;
 }
 
+.display label{
+    position: relative;
+    top: 15px;
+    font-family: 'Prompt', sans-serif;
+    transition: 0.4s;
+}
+
 #TEXTBOX{
-    text-align: justify;
+    margin: 70px 0px 0px 0px;
 }
 .row h1 {
     font-size: 32px;
     font-family: 'Prompt', sans-serif;
-    margin: 80px 0px 0px 65px;
-    text-align: center;
+    margin: 0px 0px 0px 80px;
 }
 .row .part1{
     margin: 0px 0px 0px 0px;
+    text-align: center;
     
 }
 .row .part2{
-    margin: 30px 0px 0px 0px;
-    
+    margin: 60px 0px 0px 0px;
+    text-align: center;
 }
 .row .part3{
     margin: 50px 0px 0px 0px;
-}
-.part1 label{
-    font-family: 'Prompt', sans-serif;
-    margin: 50px 0px 0px 0px;
     text-align: center;
-    opacity: 70%;
 }
 
 .row .part1,.part2 p{
     font-size: 15px;
     font-family: 'Prompt', sans-serif;
     text-align:center;
-    margin: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 70px;
     opacity: 70%;
 
 }
