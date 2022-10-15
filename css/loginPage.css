@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
 
 .mainContent{
     margin:30px auto 0px auto ;
@@ -26,7 +26,7 @@
     display: inline-block;
     font-size: 12px;
     font-weight: bold;
-    font-family: 'Prompt', sans-serif;
+    font-family: "Kanit", sans-serif;
     margin: 0px 0px 0px 20px ;
     cursor: pointer;
 }
@@ -54,12 +54,12 @@
     text-align: justify;
 }
 .row h1 {
-    font-family: 'Prompt', sans-serif;
+    font-family: "Kanit", sans-serif;
     margin: 80px 0px 15px 55px;
 }
 .Login{
     font-size: 15px;
-    font-family: 'Prompt', sans-serif;
+    font-family: "Kanit", sans-serif;
     margin: 30px 0px 0px 55px;
     opacity: 70%;
 }
@@ -68,7 +68,7 @@
 }
 .part1 p{
     font-size: 15px;
-    font-family: 'Prompt', sans-serif;
+    font-family: "Kanit", sans-serif;
     margin: 0px 0px 0px 85px;
     opacity: 70%;
 }
@@ -87,7 +87,7 @@
     width: 380px;
     height: 55px;
     color: white;
-    font-family: 'Prompt', sans-serif;
+    font-family: "Kanit", sans-serif;
     font-size: 36px;
     font-weight:bold;
     cursor: pointer;

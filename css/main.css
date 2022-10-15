@@ -32,10 +32,27 @@ li{
   width: 100%;
   height: 93px;
 }
+.menu{
+  position: relative;
+  bottom: 45px;
+  right: 5px;
+}
 .menu a{
   color: white;
   text-decoration: none;
 }
+.menu button{
+  width: 45px;
+  height: 45px;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+  cursor: pointer;
+}
+
 .slideshow{
   margin-top: 48px;
   width: 100%;
@@ -225,4 +242,19 @@ li{
   width: 108px;
   height: 112px;
   padding-top: 5px;
+}
+
+.Submit{
+  text-align: center;
+  transition: 0.4s;
+  font-size: 36px;
+  font-weight:bold;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+}
+.Submit:hover{
+  background-color: #A0C334;
+  color: white;
 }
