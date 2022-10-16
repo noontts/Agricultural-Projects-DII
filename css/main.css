@@ -6,7 +6,7 @@
   list-style-type: none;
   color: white;
   margin: 0 0 0 0;
-  padding: 30px 50px 0 0;
+  padding: 10px 50px 0 0;
 }
 .lang a{
   text-decoration: none;
@@ -32,11 +32,6 @@ li{
   width: 100%;
   height: 93px;
 }
-.menu{
-  position: relative;
-  bottom: 45px;
-  right: 5px;
-}
 .menu a{
   color: white;
   text-decoration: none;
@@ -48,8 +43,6 @@ li{
   text-decoration: none;
   border: none;
   border-radius: 50%;
-  position: relative;
-  top: 20px;
   cursor: pointer;
 }
 
@@ -264,8 +257,6 @@ li{
 .miniProfile{
   text-align: center;
   transition: 0.4s;
-  font-size: 36px;
-  font-weight:bold;
   cursor: pointer;
   border-radius: 15px;
   border: none;
