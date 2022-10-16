@@ -158,6 +158,13 @@ li{
   font-size: 32px;
   font-weight: bold;
 }
+.announce-text a{
+  text-decoration: none;
+  color: #393939;
+}
+.announce-text a:hover{
+  color: gray;
+}
 .announce-box-1{
   background-color: #DFDFDF;
   height: 293px;
