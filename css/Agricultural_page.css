@@ -1,0 +1,147 @@
+.information-content{
+    display: flex;
+}
+.government{
+    width: 363px;
+    height: 1282px;
+    background-image: linear-gradient(#A0C334, #FFFF);
+}
+.header-gov{
+    width: 363px;
+    height: 102px;
+    background-color: #303E27;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.slideshow{
+    margin-top: 0;
+}
+.profile-gov{
+    text-align: center;
+}
+.profile-gov img{
+    width: 208px;
+    height: 247px;
+}
+.name-gov{
+    margin-top: 21px;
+    font-size: 20px;
+}
+.search{
+    margin-left: 363px;
+    display: flex;
+}
+input[type=text]{
+    width: 460px;
+    height: 52px;
+    border: 0px;
+    background-color: #F1F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.button{
+    width: 163px;
+    height: 52px;
+    margin: 2px 0 0 10px;
+    background-color: #A0C334;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.button:hover{
+    color: white;
+}
+.gardener-content{
+    background-color: #F7F7F7;
+    margin-left: 10px;
+}
+.gardener-card{
+    width: 284px;
+    height: 341px;
+    box-shadow: 8px 12px 24px -12px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: #FFFF;
+}
+.gardener-container{
+    padding-left: 12px;
+    text-align: left;
+    font-size: 20px;
+}
+.gardener-container span{
+    font-weight: bold;
+}
+.gardener-card img{
+    width: 279px;
+    height: 223px;
+}
+.gardener-button{
+    margin-left: auto; 
+    margin-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    width: 81px;
+    height: 31px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+.gardener-container a{
+    text-decoration: none;
+    color: #494949;
+    font-size: 16px;
+}
+.nav-num{
+    display: flex;
+    justify-content: center;
+}
+.num-1,.num-2,.num-3,.num-4{
+    width: 30px;
+    height: 31px;
+    background-color: #FFFF;
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+.nav-num a{
+    text-decoration: none;
+    color: #8D8D8D;
+}
+.nav-num a:hover{
+    text-decoration: none;
+    color: black;
+}
+.gardener-1,.gardener-2,.gardener-3{
+    display: flex;
+    margin-top: 16px;
+}
+.gardener-1{
+    margin-top: 33px;
+    padding-top: 16px;
+}
+.gardener-3{
+    margin-bottom: 28px;
+}
+.gardener-1-1,.gardener-1-2,.gardener-1-3{
+    margin-right: 10px;
+}
+.gardener-2-1,.gardener-2-2,.gardener-2-3{
+    margin-right: 10px;
+}
+.gardener-3-1,.gardener-3-2,.gardener-3-3{
+    margin-right: 10px;
+}
+.gardener-1-1,.gardener-2-1,.gardener-3-1{
+    margin-left: 60px;
+}

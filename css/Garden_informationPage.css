@@ -14,9 +14,23 @@
 .box{
     background-color: #EBEBEB;
 }
+.box1{
+    background-color: #EBEBEB;
+    float: left;
+}
+#Profile{
+    width: 950px;
+    height: 520px;
+    margin: 0px 20px 0px 0px;
+}
+#SubProfile{
+    width: 210px;
+    height: 210px;
+    margin: 0px 7px 0px 0px;
+}
 .profilePic{
-    width: 400px;
-    height: 400px;
+    width: 950px;
+    height: 520px;
     border: none;
     transition: 0.5s;
     color: white;
@@ -26,15 +40,25 @@
     background-repeat: no-repeat;
     cursor: pointer;
 }
-.profilePic:hover{
+.profilePic2{
+    width: 210px;
+    height: 210px;
+    border: none;
+    transition: 0.5s;
+    color: white;
+    background-color: aqua;
+    background-image: url("/Picture/profilepicExample.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.profilePic:hover, .profilePic2:hover{
     opacity: 50%;
     color: white;
 }
-.profilePic:hover::after{
-    content: attr(data-hover1);
-    font-size: 18px;
-    font-weight:bold;
-}
+
 .column{
     float: left;
     width: 715px;
@@ -71,11 +95,6 @@
 #col2 p{
     margin: 0px 0px 0px 0px;
     padding: 50px 0px 0px 50px;
-}
-
-#Profile{
-    width: 400px;
-    height: 400px;
 }
 #AccountInfo{
     width: 550px;
@@ -115,11 +134,12 @@
     width: 1430px;
     height: 600px;
 }
+
 .Submit{
     margin: 15px 0px 0px 0px ;
     text-align: center;
     transition: 0.4s;
-    width: 400px;
+    width: 427px;
     height: 75px;
     color: black;
     font-size: 36px;

@@ -158,6 +158,13 @@ li{
   font-size: 32px;
   font-weight: bold;
 }
+.announce-text a{
+  text-decoration: none;
+  color: #393939;
+}
+.announce-text a:hover{
+  color: gray;
+}
 .announce-box-1{
   background-color: #DFDFDF;
   height: 293px;
@@ -198,9 +205,18 @@ li{
 .footer{
   display: flex;
   background-color: #303E27;
+  width: 1390px;
+  height: 300px;
   color: white;
   padding-top: 10px;
+<<<<<<< HEAD
   padding-left: 120px;
+
+=======
+}
+.footer-1{
+  margin-left: 120px;
+>>>>>>> 6132ae602c65994ea5aced7dd8611e19ee72499e
 }
 .footer-1-1{
   font-size: 36px;
@@ -229,7 +245,7 @@ li{
 }
 .footer-3-1{
   font-size: 16px;
-  width: 342px;
+  width: 350px;
   height: 205px;
   background-color: gray;
   text-align: center;
@@ -241,10 +257,10 @@ li{
 .footer-3-3 img{
   width: 108px;
   height: 112px;
+  margin: 0px 20px 0px 0px;
   padding-top: 5px;
 }
-
-.Submit{
+.miniProfile{
   text-align: center;
   transition: 0.4s;
   font-size: 36px;
@@ -254,7 +270,8 @@ li{
   border: none;
   background-color: white;
 }
-.Submit:hover{
+.miniProfile:hover{
   background-color: #A0C334;
   color: white;
 }
+
