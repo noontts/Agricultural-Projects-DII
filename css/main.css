@@ -200,7 +200,9 @@ li{
   background-color: #303E27;
   color: white;
   padding-top: 10px;
-  padding-left: 120px;
+}
+.footer-1{
+  margin-left: 120px;
 }
 .footer-1-1{
   font-size: 36px;
