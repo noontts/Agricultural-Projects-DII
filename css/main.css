@@ -205,24 +205,19 @@ li{
 .footer{
   display: flex;
   background-color: #303E27;
-  width: 1390px;
+  width: 1440px;
   height: 300px;
   color: white;
   padding-top: 10px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  padding-left: 120px;
+  padding-left: 63px;
 
-=======
 }
 .footer-1{
   margin-left: 120px;
->>>>>>> 6132ae602c65994ea5aced7dd8611e19ee72499e
-=======
+
 }
 .footer-1{
   margin-left: 120px;
->>>>>>> 6132ae602c65994ea5aced7dd8611e19ee72499e
 }
 .footer-1-1{
   font-size: 36px;
