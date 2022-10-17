@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 
-    <link type="text/css" rel="stylesheet" href="css/registerPage.css">
+    <link type="text/css" rel="stylesheet" href="/css/registerPage.css">
 </head>
 <body>
     <div class="mainContent">
         <div class="navbar">
             <button class="lanSelect" id="TH">TH</button>
             <button class="lanSelect" id="EN">EN</button>
+            <button class="lanSelect" id="CN">CN</button>
         </div>
         <div class="box">
             <div class="row">
@@ -46,12 +47,12 @@
         function displayUserSelectFunction1() {
             var x = document.getElementById("Organize").value;
             document.getElementById("demo").innerHTML = "คุณได้เลือกบัญชีเกษตรกร " + x;
-            document.getElementById("RegSubmit").href = "Register_SubmitPage(FARM).html";
+            document.getElementById("RegSubmit").href = "/Page/Register_SubmitPage(FARM).html";
         }
         function displayUserSelectFunction2() {
            var x = document.getElementById("Farmer").value;
            document.getElementById("demo").innerHTML = "คุณได้เลือกบัญชีองค์กร " + x;
-           document.getElementById("RegSubmit").href = "Register_SubmitPage(OGANIZE).html";
+           document.getElementById("RegSubmit").href = "/Page/Register_SubmitPage(OGANIZE).html";
         }
 
         </script>

@@ -13,6 +13,7 @@
         <div class="navbar">
             <button class="lanSelect" id="TH">TH</button>
             <button class="lanSelect" id="EN">EN</button>
+            <button class="lanSelect" id="CN">CN</button>
         </div>
         <div class="box">
             <div class="title">
@@ -20,30 +21,26 @@
                 <p>กรุณากรอกข้อมูลของคุณในช่องว่างต่างๆเพื่อบันทึกเข้าสู่ระบบ</p>
             </div>
             <div class="body">
-                <form>
+                <form action="/Agricultural-Projects-DII/php_data/register.php" method="POST">
                     <div class="container" id="Text">
-                        <label>ชื่อขององค์กร </label><br>
-                        <input type="text" name="..........."><br>
+                        <label>ชื่อผู้ใช้งาน</label><br>
+                        <input type="text" name="user"><br>
                     </div>
-                    <div class="container" id="Text2">
-                        <label>ประเภทขององค์กร</label><br>
-                        <input type="text" name="..........."><br>
-                    </div>
-                    <div class="container" id="Text2">
-                        <label>ขนาดขององค์กร</label><br>
-                        <input type="text" name="..........."><br>
+                    <div class="container" id="Text">
+                        <label>ชื่อ-นามสกุล</label><br>
+                        <input type="text" name="real_name"><br>
                     </div>
                     <div class="container" id="Mail">
                         <label>อีเมลล์</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="email"><br>
                     </div>
                     <div class="container" id="Text">
                         <label>รหัสผ่าน</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="pass"><br>
                     </div>
                     <div class="container" id="Text">
                         <label>ยืนยันรหัสผ่าน</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="confirm_pass"><br>
                     </div>
                     <div class="container" id="Submit">
                         <label>อย่าลืมตรวจสอบความถูกต้องของข้อมูลให้ถีถ้วน ก่อนทำการกดยืนยัน</label><br>
