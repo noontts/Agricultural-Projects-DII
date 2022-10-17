@@ -45,6 +45,13 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+#CN{
+    background-color: #04AA6D;
+    background-image: url("/Picture/China.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 2%;
+}
 
 .row{
     float: left;
