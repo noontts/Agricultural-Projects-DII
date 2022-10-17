@@ -69,12 +69,15 @@
     border: none;
     width: 460px;
     height: 40px;
+    border-radius: 8px;
 }
 .column textarea{
     margin: 0px 0px 0px 50px;
     resize: none;
     width: 460px;
     height: 120px;
+    border-radius: 8px;
+    border: none;
 }
 
 #col1 h2{

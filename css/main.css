@@ -28,7 +28,7 @@ li{
   padding-left: 45px;
 }
 .navbar{
-  background-color: #303E27;
+  background-color: #147529;
   width: 100%;
   height: 93px;
 }
@@ -61,7 +61,8 @@ li{
 .static{
   width: 813px;
   height: 586px;
-  background-image: linear-gradient(to bottom right, #A0C334,#A0C334,#E5D429);
+  background-color: #147529;
+  /*background-image: linear-gradient(to bottom right, #A0C334,#A0C334,#E5D429);*/
   justify-content: center;
   margin-top: 18px;
   margin-bottom: 22px;
@@ -138,7 +139,7 @@ li{
   margin: 48px 59px 55px 59px;
 }
 .lang{
-  background-color: #2C2C2C;
+  background-color: #403f3f;
 }
 .text-line{
   text-align: center;
@@ -172,7 +173,8 @@ li{
 .announce-head-1{
   padding-top: 15px;
   padding-left: 20px;
-  background-color: #A0C334;
+  background-color: #147529;
+  color: white;
   height: 40px;
   width: 498px;
   font-size: 20px;
@@ -181,7 +183,8 @@ li{
 .announce-head-2{
   padding-top: 15px;
   padding-left: 20px;
-  background-color: #A0C334;
+  background-color: #147529;
+  color: white;
   height: 40px;
   width: 734px;
   font-size: 20px;
@@ -197,7 +200,7 @@ li{
 }
 .footer{
   display: flex;
-  background-color: #303E27;
+  background-color: #403f3f;
   width: 1440px;
   height: 300px;
   color: white;

@@ -45,12 +45,15 @@
     border: none;
     width: 460px;
     height: 40px;
+    border-radius: 8px;
 }
 .column textarea{
     margin: 0px 0px 0px 50px;
     resize: none;
     width: 460px;
     height: 120px;
+    border-radius: 8px;
+    border: none;
 }
 
 #col1 h2{
@@ -90,6 +93,7 @@
     border: none;
     width: 460px;
     height: 40px;
+    border-radius: 8px;
 }
 #AccountInfo2 {
     width: 380px;
@@ -109,6 +113,7 @@
     border: none;
     width: 300px;
     height: 40px;
+    border-radius: 8px;
 }
 #Personalnfo{
     margin: 50px 0px 50px 0px;
