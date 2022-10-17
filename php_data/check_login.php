@@ -1,0 +1,22 @@
+<?php
+    session_start();
+    require_once "config.php";
+
+    /*
+     * - Define variables to collect values from html pages.
+     *   variables about users - name, password
+     * - Select data from table authenticate_info 
+     */
+    $user_name = $_POST['user'];
+    $user_pass = $_POST['pass'];
+    
+    $sql = "SELECT * FROM authenticate_info WHERE username = '$user_name' AND password = '$user_pass'";
+
+    // Connect to database and call sql table data.
+    $query = mysqli_query($connect, $sql);
+
+    if (mysqli_fetch_row($query) > 0) {
+        $row = mysqli_fetch_assoc($query);
+        header("Location: index.php");
+    }
+?>

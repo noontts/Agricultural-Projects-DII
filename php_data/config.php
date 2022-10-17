@@ -6,7 +6,7 @@
     $server = "localhost";
     $user = "root";
     $password = "";
-    $dbname = "agriDB";
+    $dbname = "agridb";
     $connect = mysqli_connect($server, $user, $password, $dbname);
 
     /*
