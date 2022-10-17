@@ -34,6 +34,9 @@
 }
 .column{
     float: left;
+    width: 465px;
+    height: 600px;
+
 }
 .column2{
     float: left;
@@ -47,14 +50,7 @@
     height: 40px;
     border-radius: 8px;
 }
-.column textarea{
-    margin: 0px 0px 0px 50px;
-    resize: none;
-    width: 460px;
-    height: 120px;
-    border-radius: 8px;
-    border: none;
-}
+
 
 #col1 h2{
     margin: 0px 0px 0px 0px;
@@ -65,7 +61,37 @@
     margin: 0px 0px 0px 0px;
     padding: 50px 0px 0px 50px;
 }
-
+#col1 input{
+    margin: 0px 0px 0px 50px;
+    border: none;
+    width: 350px;
+    height: 40px;
+    border-radius: 8px;
+}
+#col2 h2{
+    margin: 0px 0px 0px 0px;
+    padding: 50px 0px 0px 50px;
+    color: #EBEBEB;
+}
+#col2 p{
+    margin: 0px 0px 0px 0px;
+    padding: 50px 0px 0px 50px;
+}
+#col2 input{
+    margin: 0px 0px 0px 50px;
+    border: none;
+    width: 350px;
+    height: 40px;
+    border-radius: 8px;
+}
+#col2 textarea{
+    margin: 0px 0px 0px 50px;
+    resize: none;
+    width: 350px;
+    height: 120px;
+    border-radius: 8px;
+    border: none;
+}
 
 #Profile{
     width: 400px;
@@ -129,7 +155,18 @@
     background-color: #303E27;
     color: white;
 }
-
+.Display{
+    margin: 15px 0px 0px 15px ;
+    transition: 0.4s;
+    width: 445px;
+    height: 575px;
+    color: black;
+    font-size: 36px;
+    font-weight:bold;
+    border-radius: 15px;
+    border: none;
+    background-color: gray;
+}
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;
