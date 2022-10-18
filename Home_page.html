@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
 </head>
 <body>
@@ -19,7 +19,7 @@
       </div>
       <div class="menu">
             <ul>
-                <li><a href="Home_page.html">หน้าแรก</a></li>
+                <li><a href="/Home_page.html">หน้าแรก</a></li>
                 <li><a href="">เกี่ยวกับ</a></li>
                 <li><a href="">ผลผลิต</a></li>
                 <li><a href="">รายจ่าย</a></li>
@@ -28,9 +28,47 @@
             </ul>
           </div>
     </div>
-    <div class="slideshow">
-      <img src="/Picture/pic5.jpg" alt="">
-    </div>
+
+  <!--slideshow start-->
+                    <div class="slider">
+                       <div class="slides">
+                         <input type="radio" name="radio-btn" id="radio1">
+                         <input type="radio" name="radio-btn" id="radio2">
+                         <input type="radio" name="radio-btn" id="radio3">
+                         <input type="radio" name="radio-btn" id="radio4">
+                         <div class="slide first">
+                           <img src="/Picture/pic5.png" alt="">
+                         </div>
+                         <div class="slide">
+                           <img src="/Picture/pic1.jpg" alt="">
+                         </div>
+                         <div class="slide">
+                          <img src="/Picture/pic2.jpg" alt="">
+                         </div>
+                         <div class="slide">
+                          <img src="/Picture/pic3.jpg" alt="">
+                         </div>
+                         <!--Aumomatic navigation start-->
+                         <div class="auto-navigation">
+                           <div class="auto-btn1"></div>
+                           <div class="auto-btn2"></div>
+                           <div class="auto-btn3"></div>
+                           <div class="auto-btn4"></div>
+                         </div>
+                         <!--Aumomatic navigation end-->
+                        
+                       </div>
+                        <!--manual navigation start-->
+                        <div class="manual-navigation">
+                          <label for="radio1" class="manual-btn"></label>
+                          <label for="radio2" class="manual-btn"></label>
+                          <label for="radio3" class="manual-btn"></label>
+                          <label for="radio4" class="manual-btn"></label>
+                        </div>
+                        <!--manual navigation end-->
+                    </div>
+                     <!--slideshow end-->
+
     <div class="staticboard">
       <div class="staticcontent">
         <div class="static">
@@ -92,13 +130,105 @@
         </div>
         </div>
         <div class="calendar">
-          CALENDAR
+
+          <div class="month">      
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>
+                October
+                <span style="font-size:18px">2022</span>
+              </li>
+            </ul>
+          </div>
+          
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          
+          <ul class="days">  
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li><span class="active">10</span></li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
         </div>
       </div>
     </div>
-  <div class="slideshow">
-    <img src="/Picture/pic5.jpg" alt="">
-  </div>
+    
+       <!--slideshow start-->
+  <div class="slider2">
+    <div class="slides2">
+      <input type="radio" name="radio-btn2" id="radio10">
+      <input type="radio" name="radio-btn2" id="radio11">
+      <input type="radio" name="radio-btn2" id="radio12">
+      <input type="radio" name="radio-btn2" id="radio13">
+      <div class="slide first">
+        <img src="/Picture/pic5.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="/Picture/pic1.jpg" alt="">
+      </div>
+      <div class="slide">
+       <img src="/Picture/pic2.jpg" alt="">
+      </div>
+      <div class="slide">
+       <img src="/Picture/pic3.jpg" alt="">
+      </div>
+      <!--Aumomatic navigation start-->
+      <div class="auto-navigation2">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+      <!--Aumomatic navigation end-->
+     
+    </div>
+     <!--manual navigation start-->
+     <div class="manual-navigation2">
+       <label for="radio10" class="manual-btn2"></label>
+       <label for="radio11" class="manual-btn2"></label>
+       <label for="radio12" class="manual-btn2"></label>
+       <label for="radio13" class="manual-btn2"></label>
+     </div>
+     <!--manual navigation end-->
+ </div>
+  <!--slideshow end-->
+
     <div class="announce">
       <div class="announce-content">
         <div class="announce-box-1">
@@ -176,5 +306,26 @@
     </div>
     <div class="footer-bar">
     </div>
+
+    <script type="text/javascript">
+      var counter =1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter =1;
+        }
+      }, 5000);
+
+      var counter2 =10;
+      setInterval(function(){
+        document.getElementById('radio' + counter2).checked = true;
+        counter2++;
+        if(counter2 > 13){
+          counter2 =10;
+        }
+      }, 5000)
+
+     </script>
 </body>
 </html>
