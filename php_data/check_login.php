@@ -9,7 +9,6 @@
      */
     $user_name = $_POST['user'];
     $user_pass = $_POST['pass'];
-    
     $sql = "SELECT * FROM authenticate_info WHERE username = '$user_name' AND password = '$user_pass'";
 
     // Connect to database and call sql table data.
@@ -17,6 +16,10 @@
 
     if (mysqli_fetch_row($query) > 0) {
         $row = mysqli_fetch_assoc($query);
-        header("Location: index.php");
+        header("Location: ../Home_page.html");
+    } else {
+        header("Location: ../Page/LoginPage.php");
+        $_SESSION['alert'] = "<p style=\"color: red; font-size: 12px; margin: 0;\">* ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบใหม่อีกครั้ง</p>";
     }
+    mysqli_close($connect);
 ?>

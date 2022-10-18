@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Farmer</title>
-
-    <link type="text/css" rel="stylesheet" href="/css/register_SubmitPage.css">
+    <link type="text/css" rel="stylesheet" href="../css/register_SubmitPage.css">
 </head>
 <body>
     <div class="mainContent">
@@ -43,7 +42,15 @@
                         <input type="text" name="confirm_pass"><br>
                     </div>
                     <div class="container" id="Submit">
-                        <label>อย่าลืมตรวจสอบความถูกต้องของข้อมูลให้ถีถ้วน ก่อนทำการกดยืนยัน</label><br>
+                        <label>
+                            <?php
+                                session_start();
+                                if (isset($_SESSION['alert'])) {
+                                    echo $_SESSION['alert'];
+                                    unset($_SESSION['alert']);
+                                }
+                            ?>
+                        </label><br>
                         <input type="submit" class="Submit" value="ยืนยัน">
                     </div>
                 </form> 
