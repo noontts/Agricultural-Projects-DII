@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Farmer</title>
 
-    <link type="text/css" rel="stylesheet" href="/css/register_SubmitPage.css">
+    <link type="text/css" rel="stylesheet" href="../css/register_SubmitPage.css">
 </head>
 <body>
     <div class="mainContent">
@@ -21,33 +21,41 @@
                 <p>กรุณากรอกข้อมูลของคุณในช่องว่างต่างๆเพื่อบันทึกเข้าสู่ระบบ</p>
             </div>
             <div class="body">
-                <form>
+                <form action="../php_data/register.php" method="post">
                     <div class="container" id="Text">
                         <label>ชื่อขององค์กร </label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="user"><br>
                     </div>
                     <div class="container" id="Text2">
                         <label>ประเภทขององค์กร</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="or_type"><br>
                     </div>
                     <div class="container" id="Text2">
                         <label>ขนาดขององค์กร</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="or_size"><br>
                     </div>
                     <div class="container" id="Mail">
                         <label>อีเมลล์</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="email"><br>
                     </div>
                     <div class="container" id="Text">
                         <label>รหัสผ่าน</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="pass"><br>
                     </div>
                     <div class="container" id="Text">
                         <label>ยืนยันรหัสผ่าน</label><br>
-                        <input type="text" name="..........."><br>
+                        <input type="text" name="confirm_pass"><br>
                     </div>
                     <div class="container" id="Submit">
-                        <label>อย่าลืมตรวจสอบความถูกต้องของข้อมูลให้ถีถ้วน ก่อนทำการกดยืนยัน</label><br>
+                        <label>
+                            <?php
+                                session_start();
+                                if (isset($_SESSION['alert'])) {
+                                    echo $_SESSION['alert'];
+                                    unset($_SESSION['alert']);
+                                }
+                            ?>
+                        </label><br>
                         <input type="submit" class="Submit" value="ยืนยัน">
                     </div>
                 </form> 

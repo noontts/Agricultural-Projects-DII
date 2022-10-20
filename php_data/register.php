@@ -6,11 +6,15 @@
      * - Define variables to collect values from html pages.
      * - variables about user accounts data.
      */
+    $user_type = $_SESSION['type'];
     $user_name = $_POST['user'];
     $user_pass = $_POST['pass'];
     $user_confirm_pass = $_POST['confirm_pass'] ;
-    $user_realname = $_POST['real_name'];
     $user_email =  $_POST['email'];
+
+    $user_realname = $_POST['real_name'];
+    $user_organize_type = $_POST['or_type'];
+    $user_organize_size = $_POST['or_size'];
     
 
     // Checking if password and confirm_password are same values.
@@ -21,14 +25,15 @@
         * and insert values into 'authenticate_info'.
         */ 
 
-        if (empty($user_name) OR empty($user_realname) OR empty($user_email)) 
+        if (empty($user_name) OR empty($user_email)) 
         {
             $_SESSION['alert'] = "คุณยังกรอกข้อมูลไม่ครบถ้วน! กรุณาตรวจสอบและทำรายการใหม่อีกครั้ง";
-            header( 'Location: ../Page/Register_SubmitPage(FARM).php');
+            if ($user_type == "farmer_type") { header( 'Location: ../Page/Register_SubmitPage(FARM).php'); }
+            else { header('Location: ../Page/Register_SubmitPage(ORGANIZE).php'); }
         }
         else {
-            $userQuery = "INSERT into authenticate_info VALUES
-                ('', '', '$user_name', '$user_pass', 'user_email')";
+            $userQuery = "INSERT into authsystem_demo VALUES
+                ('', '$user_type', '$user_name', '$user_pass', 'user_email')";
             $result = mysqli_query($connect, $userQuery);
             
             // If if can't run query will display pharse in 'die' otherwise, it will be head to 'Login.html' pages.
@@ -44,7 +49,8 @@
     else 
     {
         $_SESSION['alert'] = "รหัสผ่านของคุณไม่ตรงกัน! กรุณาตรวจสอบและทำรายการใหม่อีกครั้ง";
-        header( 'Location: ../Page/Register_SubmitPage(FARM).php');
+        if ($user_type == "farmer_type") { header( 'Location: ../Page/Register_SubmitPage(FARM).php'); }
+        else { header('Location: ../Page/Register_SubmitPage(ORGANIZE).php'); }
     }
     
 

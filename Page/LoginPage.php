@@ -52,7 +52,7 @@
                         }
                     ?>
                     <input type="submit" class="Submit" value="ยืนยัน">
-                    <p>คุณมีบัญชีสมาชิกแล้วหรือไม่? <a href="/Page/RegisterPage.html">สมัครสมาชิกเดี๋ยวนี้</a></p>
+                    <p>คุณมีบัญชีสมาชิกแล้วหรือไม่? <a href="../Page/RegisterPage.php">สมัครสมาชิกเดี๋ยวนี้</a></p>
                 </form>
             </div>
         </div>

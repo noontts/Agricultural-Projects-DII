@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 
-    <link type="text/css" rel="stylesheet" href="/css/registerPage.css">
+    <link type="text/css" rel="stylesheet" href="../css/registerPage.css">
 </head>
 <body>
     <div class="mainContent">
@@ -15,11 +15,14 @@
             <button class="lanSelect" id="EN">EN</button>
             <button class="lanSelect" id="CN">CN</button>
         </div>
+
+        <form action="../php_data/type_select.php" method="post">
         <div class="box">
             <div class="row">
                 <div class="select">
-                    <button id="Farmer" data-hover1="เกษตรกร" onclick="displayUserSelectFunction1()"></button>
-                    <button id="Organize" data-hover2="องค์กร" onclick="displayUserSelectFunction2()"></button>
+                    <input type="hidden" id="sType" name="system_type" value="">
+                    <input type="button" id="Farmer" data-hover1="เกษตรกร" onclick="displayUserSelectFunction1()"></button>
+                    <input type="button" id="Organize" data-hover2="องค์กร" onclick="displayUserSelectFunction2()"></button>
                 </div>   
             </div>
             <div class="row" id="TEXTBOX">
@@ -33,24 +36,23 @@
                     <div class="display" ><label id="demo"></label></div>
                 </div>
                 <div class="part3">
-                    <form>
-                        <button class="Submit"><a id="RegSubmit" href="">ต่อไป</a></button>
-                    </form>
-                    <form>
-                        <button class="Submit" ><a href="/Page/LoginPage.html">กลับ</a></button>
-                    </form>
+                    <input type="Submit" class="Submit"><a id="RegSubmit" href="">ต่อไป</a></button>
+                    <input type="button" class="Submit" ><a href="/Page/LoginPage.html">กลับ</a></button>
                 </div>
            </div>
-       </div>
+        </div>
+        </form>
 
        <script>
         function displayUserSelectFunction1() {
             var x = document.getElementById("Organize").value;
+            document.getElementById("sType").value = "farmer_role";
             document.getElementById("demo").innerHTML = "คุณได้เลือกบัญชีเกษตรกร " + x;
-            document.getElementById("RegSubmit").href = "/Page/Register_SubmitPage(FARM).html";
+            document.getElementById("RegSubmit").href = "../Page/Register_SubmitPage(FARM).php";
         }
         function displayUserSelectFunction2() {
            var x = document.getElementById("Farmer").value;
+           document.getElementById("sType").value = "organize_role";
            document.getElementById("demo").innerHTML = "คุณได้เลือกบัญชีองค์กร " + x;
            document.getElementById("RegSubmit").href = "/Page/Register_SubmitPage(OGANIZE).html";
         }
