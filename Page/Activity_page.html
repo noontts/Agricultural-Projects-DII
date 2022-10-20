@@ -40,9 +40,47 @@
         </div>
       </div>
       <div class="mainContent">
-         <div class="slide_show" >
-            <img src="/Picture/pic5.jpg" alt="">
-         </div>
+
+          <!--slideshow start-->
+  <div class="slider2">
+    <div class="slides2">
+      <input type="radio" name="radio-btn2" id="radio10">
+      <input type="radio" name="radio-btn2" id="radio11">
+      <input type="radio" name="radio-btn2" id="radio12">
+      <input type="radio" name="radio-btn2" id="radio13">
+      <div class="slide first">
+        <img src="/Picture/pic5.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="/Picture/pic1.jpg" alt="">
+      </div>
+      <div class="slide">
+       <img src="/Picture/pic2.jpg" alt="">
+      </div>
+      <div class="slide">
+       <img src="/Picture/pic3.jpg" alt="">
+      </div>
+      <!--Aumomatic navigation start-->
+      <div class="auto-navigation2">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+      <!--Aumomatic navigation end-->
+     
+    </div>
+     <!--manual navigation start-->
+     <div class="manual-navigation2">
+       <label for="radio10" class="manual-btn2"></label>
+       <label for="radio11" class="manual-btn2"></label>
+       <label for="radio12" class="manual-btn2"></label>
+       <label for="radio13" class="manual-btn2"></label>
+     </div>
+     <!--manual navigation end-->
+ </div>
+  <!--slideshow end-->
+        
      </div>
      <div class="mainContent">
         <div class="middleBox" id="Sub-navbar">
@@ -85,15 +123,47 @@
             <div class="contentBox" id="Activity-info">
                 <div class="Activity-info-box">
                     <div class="row" id="headerRow"><h2>ข้อมูลพื้นฐาน</h2></div>
-                    <div class="row" id="photoRow">
-                        <img src="/Picture/pic5.png">
+
+                    <!--slideshow start-->
+                    <div class="slider">
+                       <div class="slides">
+                         <input type="radio" name="radio-btn" id="radio1">
+                         <input type="radio" name="radio-btn" id="radio2">
+                         <input type="radio" name="radio-btn" id="radio3">
+                         <input type="radio" name="radio-btn" id="radio4">
+                         <div class="slide first">
+                           <img src="/Picture/pic5.png" alt="">
+                         </div>
+                         <div class="slide">
+                           <img src="/Picture/pic1.jpg" alt="">
+                         </div>
+                         <div class="slide">
+                          <img src="/Picture/pic2.jpg" alt="">
+                         </div>
+                         <div class="slide">
+                          <img src="/Picture/pic3.jpg" alt="">
+                         </div>
+                         <!--Aumomatic navigation start-->
+                         <div class="auto-navigation">
+                           <div class="auto-btn1"></div>
+                           <div class="auto-btn2"></div>
+                           <div class="auto-btn3"></div>
+                           <div class="auto-btn4"></div>
+                         </div>
+                         <!--Aumomatic navigation end-->
+                        
+                       </div>
+                        <!--manual navigation start-->
+                        <div class="manual-navigation">
+                          <label for="radio1" class="manual-btn"></label>
+                          <label for="radio2" class="manual-btn"></label>
+                          <label for="radio3" class="manual-btn"></label>
+                          <label for="radio4" class="manual-btn"></label>
+                        </div>
+                        <!--manual navigation end-->
                     </div>
-                    <div class="row" id="headerRow">
-                        <button class="selectPic"></button>
-                        <button class="selectPic"></button>
-                        <button class="selectPic"></button>
-                        <button class="selectPic"></button>
-                    </div>
+                     <!--slideshow end-->
+
                     <div class="column" id="col1">
                         <div class="row-col" id="row-col1"><p>ชื่อกิจกรรม</p></div>
                         <div class="row-col" id="row-col1"><p>รูปแบบของกิจกรรม </p></div>
@@ -166,5 +236,26 @@
       </div>
       <div class="footer-bar">
       </div>
+
+      <script type="text/javascript">
+        var counter =1;
+        setInterval(function(){
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if(counter > 4){
+            counter =1;
+          }
+        }, 5000);
+  
+        var counter2 =10;
+        setInterval(function(){
+          document.getElementById('radio' + counter2).checked = true;
+          counter2++;
+          if(counter2 > 13){
+            counter2 =10;
+          }
+        }, 5000)
+  
+       </script>
 </body>
 </html>
