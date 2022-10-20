@@ -19,7 +19,7 @@
         header("Location: ../Home_page.html");
     } else {
         header("Location: ../Page/LoginPage.php");
-        $_SESSION['alert'] = "<p style=\"color: red; font-size: 12px; margin: 0;\">* ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบใหม่อีกครั้ง</p>";
+        $_SESSION['alert'] = "<p style=\"color: red; font-size: 12px; margin: 0;\">* ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบใหม่อีกครั้ง.</p>";
     }
     mysqli_close($connect);
 ?>

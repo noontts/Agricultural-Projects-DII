@@ -31,7 +31,7 @@
                 ('', '', '$user_name', '$user_pass', 'user_email')";
             $result = mysqli_query($connect, $userQuery);
             
-            // If if can't run query will display pharse in 'die' otherwise, it will be head to 'Login.html' page.
+            // If if can't run query will display pharse in 'die' otherwise, it will be head to 'Login.html' pages.
             if (!$result){ die ("ไม่สามารถเชื่อมต่อหรือรัน Query ของผู้ใช้งานได้ $userQuery".mysqli_error($connect)); }
             else{ 
                 header( 'Location: ../Page/LoginPage.php');
