@@ -12,46 +12,72 @@
     $user_confirm_pass = $_POST['confirm_pass'] ;
     $user_email =  $_POST['email'];
 
-    $user_realname = $_POST['real_name'];
-    $user_organize_type = $_POST['or_type'];
-    $user_organize_size = $_POST['or_size'];
+    // Global variables to check if textbox is empty.
+    $GLOBALS['emptyScan'] = false;
     
 
-    // Checking if password and confirm_password are same values.
-    if ($user_pass == $user_confirm_pass) 
-    {
-        /*
-        * Define 'userQuery' to collect data from html page
-        * and insert values into 'authenticate_info'.
-        */ 
-
-        if (empty($user_name) OR empty($user_email)) 
-        {
-            $_SESSION['alert'] = "คุณยังกรอกข้อมูลไม่ครบถ้วน! กรุณาตรวจสอบและทำรายการใหม่อีกครั้ง";
-            if ($user_type == "farmer_type") { header( 'Location: ../Page/Register_SubmitPage(FARM).php'); }
-            else { header('Location: ../Page/Register_SubmitPage(ORGANIZE).php'); }
+    /*
+     * - " perDataQuery " require 1 array(user data) & 1 string(user type).  
+     * - loop each values in array to check if it has spacebar or empty.
+     *   it'll send to thier register page again.
+     */
+    function perDataQuery ($arrayData, $type) {
+        foreach ($arrayData as $value) {
+            $pattern = '/\s/';
+            if (preg_match($pattern, $value) != 0) 
+            {
+                $_SESSION['alert'] = "คุณไม่สามารถเว้นช่องว่างในกล่องข้อความได้!";
+                $GLOBALS['emptyScan'] = true; headerNext($type);
+            } 
+            else 
+            {
+                if(empty($value)) {
+                    $_SESSION['alert'] = "คุณกรอกข้อมูลบางอย่างไม่สมบูรณ์ กรุณาลองใหม่อีกครั้ง!";
+                    $GLOBALS['emptyScan'] = true; headerNext($type);
+                }
+            }
         }
-        else {
+    }
+
+
+    /*
+     * - " headerNext " require 1 string(user type).
+     * - check if it be - farmer - will send to reg-farmer page
+     *   , otherwise send to reg_organize.
+     */
+    function headerNext ($type) {
+        if ($type == "farmer_role") { header( 'Location: ../Page/Register_SubmitPage(FARM).php'); }
+        else if ($type == "organize_role") { header( 'Location: ../Page/Register_SubmitPage(ORGANIZE).php'); }
+    }
+
+
+    // call function "perDataQuery" by using array of user data.
+    $dataArray = array($user_name, $user_email, $user_pass, $user_confirm_pass);
+    perDataQuery($dataArray, $user_type);
+
+
+    /*
+     * check if it has empty value and inside check 
+     * if the password is match or doesn't match.
+     */
+    if($GLOBALS['emptyScan'] == false) {
+        if ($user_pass == $user_confirm_pass)
+        {
             $userQuery = "INSERT into authsystem_demo VALUES
-                ('', '$user_type', '$user_name', '$user_pass', 'user_email')";
+                ('', '$user_type', '$user_name', '$user_pass', '$user_email')";
             $result = mysqli_query($connect, $userQuery);
             
-            // If if can't run query will display pharse in 'die' otherwise, it will be head to 'Login.html' pages.
             if (!$result){ die ("ไม่สามารถเชื่อมต่อหรือรัน Query ของผู้ใช้งานได้ $userQuery".mysqli_error($connect)); }
-            else{ 
+            else { 
                 header( 'Location: ../Page/LoginPage.php');
-             }
+                //echo "เชื่อมต่อแล้ว";
+            }
         }
-        
-    } 
-
-    // if it doesn't same password. it'll display alert in same page.
-    else 
-    {
-        $_SESSION['alert'] = "รหัสผ่านของคุณไม่ตรงกัน! กรุณาตรวจสอบและทำรายการใหม่อีกครั้ง";
-        if ($user_type == "farmer_type") { header( 'Location: ../Page/Register_SubmitPage(FARM).php'); }
-        else { header('Location: ../Page/Register_SubmitPage(ORGANIZE).php'); }
-    }
-    
-
+        else 
+        {
+            //echo "รหัสไม่ตรงกัน";
+            $_SESSION['alert'] = "รหัสผ่านของคุณไม่ตรงกัน กรุณาตรวจสอบและแก้ไขใหม่อีกครั้ง!";
+            headerNext($user_type);
+        }
+    }   
 ?>
