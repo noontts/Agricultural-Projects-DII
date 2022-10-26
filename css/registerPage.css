@@ -74,7 +74,7 @@
     font-family: "Kanit", sans-serif;
     cursor: pointer;
     border: none;
-    background-image: url("/Picture/pic1.jpg");
+    background-image: url("../Picture/pic1.jpg");
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
@@ -100,7 +100,7 @@
     font-family: "Kanit", sans-serif;
     cursor: pointer;
     border: none;
-    background-image: url("/Picture/pic5.png");
+    background-image: url("../Picture/pic5.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;

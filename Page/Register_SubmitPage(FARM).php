@@ -20,7 +20,7 @@
                 <p>กรุณากรอกข้อมูลของคุณในช่องว่างต่างๆเพื่อบันทึกเข้าสู่ระบบ</p>
             </div>
             <div class="body">
-                <form action="/Agricultural-Projects-DII/php_data/register.php" method="POST">
+                <form action="../php_data/register.php" method="POST">
                     <div class="container" id="Text">
                         <label>ชื่อผู้ใช้งาน</label><br>
                         <input type="text" name="user"><br>
