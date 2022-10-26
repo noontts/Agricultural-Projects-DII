@@ -43,15 +43,6 @@ li{
 .menu a:hover{
   color: black;
 }
-.menu button{
-  width: 45px;
-  height: 45px;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 .staticboard{
   margin-top: 44px;
@@ -256,18 +247,42 @@ li{
   height: 30px;
   width: 100%;
 }
-.miniProfile{
+
+
+/*Mini Profile part*/
+.miniLogInProfile{
+  width: 45px;
+  height: 45px;
   text-align: center;
   transition: 0.4s;
-  cursor: pointer;
-  border-radius: 15px;
+  text-decoration: none;
   border: none;
+  border-radius: 50%;
   background-color: white;
+  cursor: pointer;
 }
-.miniProfile:hover{
+.miniLogInProfile:hover{
   background-color: #1e1e1e;
   color: white;
 }
+
+.miniLogOutProfile{
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  transition: 0.4s;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.miniLogOutProfile:hover{
+  background-color: rgb(180, 0, 0);
+  color: black;
+}
+
 
 /*Slideshow part*/
 .slider{

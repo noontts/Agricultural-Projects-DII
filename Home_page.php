@@ -30,7 +30,7 @@
                     if (isset($_SESSION['userStatus'])) {
                       echo $_SESSION['userStatus'];
                     } else {
-                      echo "<a href=\"./Page/LoginPage.php\"><button class=\"miniProfile\">Login</button></a>";
+                      echo "<a href=\"./Page/LoginPage.php\"><button class=\"miniLogInProfile\">Login</button></a>";
                     }
                   ?>
                   <!--<a href="./Page/LoginPage.php"><button class="miniProfile">Login</button></a>-->

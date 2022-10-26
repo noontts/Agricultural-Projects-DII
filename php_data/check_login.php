@@ -15,7 +15,12 @@
     $query = mysqli_query($connect, $sql);
 
     if (mysqli_fetch_row($query) > 0) {
-        $_SESSION['userStatus'] ="<a href=\"php_data/logout.php\"><button class=\"miniProfile\ type=\"Submit\">Logout</button></a>";
+        $_SESSION['userStatus'] ="<a href=\"php_data/logout.php\">
+        
+        <button class=\"miniLogOutProfile\" type=\"Submit\">Logout</button>
+        
+        
+        </a>";
                                 
         header("Location: ../Home_page.php");
     } else {
