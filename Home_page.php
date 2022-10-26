@@ -64,6 +64,7 @@
                            <div class="auto-btn2"></div>
                            <div class="auto-btn3"></div>
                            <div class="auto-btn4"></div>
+                           
                          </div>
                          <!--Aumomatic navigation end-->
                         
@@ -139,18 +140,18 @@
             </div>
         </div>
         </div>
-        <div class="calendar">
+            <div class="calendar">
 
-          <div class="month">      
-            <ul>
-              <li class="prev">&#10094;</li>
-              <li class="next">&#10095;</li>
-              <li>
-                October
-                <span style="font-size:18px">2022</span>
-              </li>
-            </ul>
-          </div>
+              <div class="month">      
+                <ul>
+                  <li class="prev">&#10094;</li>
+                  <li class="next">&#10095;</li>
+                  <li>
+                    October
+                    <span style="font-size:18px">2022</span>
+                  </li>
+                </ul>
+              </div>
           
           <ul class="weekdays">
             <li>Mo</li>
