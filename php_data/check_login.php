@@ -15,7 +15,8 @@
     $query = mysqli_query($connect, $sql);
 
     if (mysqli_fetch_row($query) > 0) {
-        $row = mysqli_fetch_assoc($query);
+        $_SESSION['userStatus'] = "<form action=\"../php_data/logout.php\" method=\"post\">
+                                <input type=\"Submit\" value=\"Logout\"></a></form>";
         header("Location: ../Home_page.php");
     } else {
         header("Location: ../Page/LoginPage.php");

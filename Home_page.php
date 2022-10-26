@@ -24,7 +24,17 @@
                 <li><a href="">ผลผลิต</a></li>
                 <li><a href="">รายจ่าย</a></li>
                 <li><a href="">กิจกรรม</a></li>
-                <li><a href="./Page/LoginPage.php"><button class="miniProfile">Login</button></a></li>
+                <li>
+                  <?php
+                    session_start();
+                    if (isset($_SESSION['userStatus'])) {
+                      echo $_SESSION['userStatus'];
+                    } else {
+                      echo "<a href=\"./Page/LoginPage.php\"><button class=\"miniProfile\">Login</button></a>";
+                    }
+                  ?>
+                  <!--<a href="./Page/LoginPage.php"><button class="miniProfile">Login</button></a>-->
+                </li>
             </ul>
           </div>
     </div>
