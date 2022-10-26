@@ -40,7 +40,7 @@
                          <a id="RegSubmit" href=""> <input type="Submit" class="Submit"></button></a>
                     </div>
                     <div class="part3">
-                         <a href="/Page/LoginPage.html"><input type="button" class="Submit" value="กลับ"></button></a> 
+                         <a href="../Home_page.php"><input type="button" class="Submit" value="กลับ"></button></a> 
                     </div>
             </div>
         </form>
