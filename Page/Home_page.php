@@ -5,40 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
 </head>
-<body>
-    <div class="navbar">
-      <div class="lang">
-        <ul class="lang">
-          <li><a href="">TH</a></li>
-          <li><a href="">EN</a></li>
-          <li><a href="">CN</a></li>
-        </ul>
-      </div>
-      <div class="menu">
-            <ul>
-                <li><a href="./Home_page.php">หน้าแรก</a></li>
-                <li><a href="">เกี่ยวกับ</a></li>
-                <li><a href="">ผลผลิต</a></li>
-                <li><a href="">รายจ่าย</a></li>
-                <li><a href="">กิจกรรม</a></li>
-                <li>
-                  <?php
-                    session_start();
-                    if (isset($_SESSION['userStatus'])) {
-                      echo $_SESSION['userStatus'];
-                    } else {
-                      echo "<a href=\"./Page/LoginPage.php\"><button class=\"miniLogInProfile\">Login</button></a>";
-                    }
-                  ?>
-                  <!--<a href="./Page/LoginPage.php"><button class="miniProfile">Login</button></a>-->
-                </li>
-            </ul>
-          </div>
-    </div>
 
+  <?php include(__DIR__. "/Header.php")?>
+  
   <!--slideshow start-->
                     <div class="slider">
                        <div class="slides">
@@ -47,16 +19,16 @@
                          <input type="radio" name="radio-btn" id="radio3">
                          <input type="radio" name="radio-btn" id="radio4">
                          <div class="slide first">
-                           <img src="./Picture/pic5.jpg" alt="">
+                           <img src="../Picture/pic5.jpg" alt="">
                          </div>
                          <div class="slide">
-                           <img src="./Picture/pic1.jpg" alt="">
+                           <img src="../Picture/pic1.jpg" alt="">
                          </div>
                          <div class="slide">
-                          <img src="./Picture/pic2.jpg" alt="">
+                          <img src="../Picture/pic2.jpg" alt="">
                          </div>
                          <div class="slide">
-                          <img src="./Picture/pic3.jpg" alt="">
+                          <img src="../Picture/pic3.jpg" alt="">
                          </div>
                          <!--Aumomatic navigation start-->
                          <div class="auto-navigation">
@@ -208,16 +180,16 @@
       <input type="radio" name="radio-btn2" id="radio12">
       <input type="radio" name="radio-btn2" id="radio13">
       <div class="slide first">
-        <img src="./Picture/pic5.jpg" alt="">
+        <img src="../Picture/pic5.jpg" alt="">
         </div>
         <div class="slide">
-        <img src="./Picture/pic1.jpg" alt="">
+        <img src="../Picture/pic1.jpg" alt="">
         </div>
         <div class="slide">
-        <img src="./Picture/pic2.jpg" alt="">
+        <img src="../Picture/pic2.jpg" alt="">
         </div>
         <div class="slide">
-        <img src="./Picture/pic3.jpg" alt="">
+        <img src="../Picture/pic3.jpg" alt="">
         </div>
       <!--Aumomatic navigation start-->
       <div class="auto-navigation2">
@@ -309,8 +281,8 @@
           กลุ่มสำหรับติดต่อแลกเปลี่ยน<br>
           ความคิดเห็นสำหรับสมาชิกเกษตรกร
           <div class="footer-3-3">
-            <img src="./Picture/line2.png">
-            <img src="./Picture/line2.png">
+            <img src="../Picture/line2.png">
+            <img src="../Picture/line2.png">
           </div>
         </div>
       </div>

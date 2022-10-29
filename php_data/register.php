@@ -12,9 +12,15 @@
     $user_confirm_pass = $_POST['confirm_pass'] ;
     $user_email =  $_POST['email'];
 
+    if($user_type == "farmer_role") {
+        $fm_realname = $_POST['real_name'];
+    } else if ($user_type == "organize_role") {
+        $or_type = $_POST['type'];
+        $or_size = $_POST['size'];
+    }
+
     // Global variables to check if textbox is empty.
     $GLOBALS['emptyScan'] = false;
-
 
      /*
      * - " perDataQuery " require 1 array(user data) & 1 string(user type).  
@@ -46,8 +52,16 @@
      *   , otherwise send to reg_organize.
      */
     function headerNext ($type) {
-        if ($type == "farmer_role") { header( 'Location: ../Page/Register_SubmitPage(FARM).php'); }
-        else if ($type == "organize_role") { header( 'Location: ../Page/Register_SubmitPage(ORGANIZE).php'); }
+        if ($type == "farmer_role") 
+        { 
+            header( 'Location: ../Page/Register_SubmitPage(FARM).php'); 
+            $_SESSION['refRole'] = 0;
+        }
+        else if ($type == "organize_role") 
+        { 
+            header( 'Location: ../Page/Register_SubmitPage(ORGANIZE).php'); 
+            $_SESSION['refRole'] = 1;
+        }
     }
 
     
@@ -76,14 +90,41 @@
         if($GLOBALS['emptyScan'] == false) {
             if ($user_pass == $user_confirm_pass)
             {
+                //
                 $userQuery = "INSERT into authsystem_demo VALUES
                     ('', '$user_type', '$user_name', '$user_pass', '$user_email')";
                 $result = mysqli_query($connect, $userQuery);
             
-                if (!$result){ die ("ไม่สามารถเชื่อมต่อหรือรัน Query ของผู้ใช้งานได้ $userQuery".mysqli_error($connect)); }
-                else { 
+                if (!$result)
+                { die ("ไม่สามารถเชื่อมต่อหรือรัน Query ของผู้ใช้งานได้ $userQuery".mysqli_error($connect)); }
+                else 
+                { 
+                    $autoQuery = "SELECT ID FROM authsystem_demo WHERE username = '$user_name'";
+                    $rows = mysqli_fetch_assoc(mysqli_query($connect, $autoQuery));
+                    $uid = $rows['ID'];
+
+                    function generate_userdb($values, $dir, $connection) {
+                        for ($count = 0; $count < count($dir); $count++)
+                        {
+                            $generate_id[$count] = "INSERT into $dir[$count] VALUES($values[$count])";
+                            mysqli_query($connection, $generate_id[$count]);
+                        }
+                    }
+                    
+                    if ($user_type == "farmer_role") 
+                    { 
+                        $tableValue = array("'$uid', '$fm_realname'", $uid);
+                        $tableName = array("fm_personal_info(ID, fm_realname)", "garden_info(ID)");
+                        generate_userdb($tableValue, $tableName, $connect); 
+                    }
+
+                    else if ($user_type == "organize_role") 
+                    { 
+                        generate_userdb("'$uid', '$or_type', '$or_size'", 
+                        "or_personal_info(ID, or_type, or_size)", $connect);
+                    }
+
                     header( 'Location: ../Page/LoginPage.php');
-                    //echo "เชื่อมต่อแล้ว";
                 }
             }
             else 

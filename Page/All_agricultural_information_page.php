@@ -5,30 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/All_agricultural_information_page.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/All_agricultural_information_page.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
 </head>
-<body>
-    <div class="navbar">
-        <div class="lang">
-          <ul class="lang">
-            <li><a href="">TH</a></li>
-            <li><a href="">EN</a></li>
-            <li><a href="">CN</a></li>
-          </ul>
-        </div>
-        <div class="menu">
-              <ul>
-                  <li><a href="Home_page.html">หน้าแรก</a></li>
-                  <li><a href="">เกี่ยวกับ</a></li>
-                  <li><a href="">ผลผลิต</a></li>
-                  <li><a href="">รายจ่าย</a></li>
-                  <li><a href="">กิจกรรม</a></li>
-                  <li><a href="/Page/LoginPage.html"><button class="miniProfile">Login</button></a></li>
-              </ul>
-            </div>
-      </div>
+
+  <?php include(__DIR__. "/Header.php")?>
+
       <div class="header-farmer">
         ข้อมูลเกษตรกร
       </div>
@@ -36,27 +19,42 @@
         <div class="col-1">
           <div class="section">
             <div class="farmer-profile">
-              <img src="/Picture/farmer-profile.png" alt="" style="width:100%">
+              <img src="../Picture/farmer-profile.png" alt="" style="width:100%">
               เกษตรกร
           </div>
           <div class="detail-farmer">
+
+              <?php 
+                $uid = $_SESSION['uid'];
+                $tableList = array('authsystem_demo', 'fm_personal_info', 'garden_info');
+
+                $sql_auth = "SELECT email FROM authsystem_demo WHERE ID = '$uid'";
+                $rows1 = mysqli_fetch_assoc(mysqli_query($connect, $sql_auth));
+                $sql_fm = "SELECT * FROM fm_personal_info WHERE ID = '$uid'";
+                $rows2 = mysqli_fetch_assoc(mysqli_query($connect, $sql_fm));
+                $sql_gd = "SELECT * FROM garden_info WHERE ID = '$uid'";
+                $rows3 = mysqli_fetch_assoc(mysqli_query($connect, $sql_gd));
+              ?>
+
               <p>ชื่อ</p>
-              นายสง่า แก้วสัก
+              <?php echo $rows2['fm_realname']; ?>
               <p>เลขประจำตัวประชาชน</p>
-              3510100211151
+              <?php echo $rows2['fm_nation_id']; ?>
               <p>ที่อยู่</p>
-              90/1 หมู่8 ศรีบัวบาน เมืองลำพูน ลำพูน 51000
+              <?php echo $rows2['fm_area']; ?>
               <p>วันเกิด</p>
-              11 มิถุนายน 2519
+              <?php echo $rows2['fm_birth']; ?>
               <p>อีเมล</p>
-              sangar.kaewsak@gmail.com
+              <?php echo $rows1['email']; ?>
               <p>ไลน์ไอดี</p>
-              sangar_kaewsak
+              <?php echo $rows2['fm_line']; ?>
               <p>เบอร์โทรศัพท์</p>
-              0896375202
+              <?php echo $rows2['fm_tel']; ?>
           </div>
           <div class="button-detail">
-              <button class="update-detail">+  แก้ไขรายละเอียด</button><br>
+              <a href="../Page/Agricultural_Information_Page.php?id=<?php echo $_SESSION['uid']; ?>">
+                <button class="update-detail">+  แก้ไขรายละเอียด</button>
+              </a><br>
               <button class="delete">ลบรายชื่อนี้ทิ้ง</button>
           </div>
 
@@ -75,16 +73,16 @@
                     <input type="radio" name="radio-btn2" id="radio3">
                     <input type="radio" name="radio-btn2" id="radio4">
                   <div class="slide first">
-                    <img src="/Picture/pic5.png" alt="">
+                    <img src="../Picture/pic5.png" alt="">
                   </div>
                   <div class="slide">
-                    <img src="/Picture/pic1.jpg" alt="">
+                    <img src="../Picture/pic1.jpg" alt="">
                   </div>
                   <div class="slide">
-                  <img src="/Picture/pic2.jpg" alt="">
+                  <img src="../Picture/pic2.jpg" alt="">
                   </div>
                   <div class="slide">
-                  <img src="/Picture/pic3.jpg" alt="">
+                  <img src="../Picture/pic3.jpg" alt="">
                   </div>
                   <!--Aumomatic navigation start-->
                   <div class="auto-navigation2">
@@ -112,26 +110,27 @@
               <table>
                   <tr>
                       <td class="table-head">ชื่อสวน</td>
-                      <td>สวนลำไยลุงสง่า</td>
+                      <td><?php echo $rows3['gd_name']; ?></td>
                   </tr>
                   <tr>
                       <td class="table-head">ที่อยู่ </td>
-                      <td>18 หมู่ 9 ศรีบัวบาน เมืองลำพูน ลำพูน 51000</td>
+                      <td><?php echo $rows3['gd_area']?></td>
                   </tr>
                   <tr>
                       <td class="table-head">ที่ดินแปลงนี้มีพื้นที่ประมาณ</td>
-                      <td>25 ไร่</td>
+                      <td><?php echo $rows3['gd_area_square'];?> ไร่</td>
                   </tr>
                   <tr>
                       <td class="table-head">วิธีการปลูก</td>
-                      <td>ผ่านมาตรฐานการผลิตทางการเกษตรที่ดีและเหมาะสม<br>(GAP)</td>
+                      <td><?php echo $rows3['gd_treat']?></td>
                   </tr>
                   <tr>
                       <td class="table-head">รายละเอียด</td>
-                      <td>สมาชิกกลุ่มลำไยแปลงใหญ่ ต.ศรีบัวบาน</td>
+                      <td><?php echo $rows3['gd_detail']?></td>
                   </tr>
                 </table>
-                <button class="edit-detail">+  แก้ไขรายละเอียด</button>
+                <a href="../Page/Garden_information_Page.php?id=<?php echo $_SESSION['uid']; ?>">
+                <button class="edit-detail">+  แก้ไขรายละเอียด</button></a><br>
           </div>
 
           </div>
@@ -146,16 +145,16 @@
                     <input type="radio" name="radio-btn2" id="radio12">
                     <input type="radio" name="radio-btn2" id="radio13">
                   <div class="slide first">
-                    <img src="/Picture/pic5.png" alt="">
+                    <img src="../Picture/pic5.png" alt="">
                   </div>
                   <div class="slide">
-                    <img src="/Picture/pic1.jpg" alt="">
+                    <img src="../Picture/pic1.jpg" alt="">
                   </div>
                   <div class="slide">
-                  <img src="/Picture/pic2.jpg" alt="">
+                  <img src="../Picture/pic2.jpg" alt="">
                   </div>
                   <div class="slide">
-                  <img src="/Picture/pic3.jpg" alt="">
+                  <img src="../Picture/pic3.jpg" alt="">
                   </div>
                   <!--Aumomatic navigation start-->
                   <div class="auto-navigation3">
@@ -227,10 +226,10 @@
            ช่องทางติดตามข่าวสาร
           </div>
           <div class="footer-1-4">
-            <a href="#"><img src="/Picture/printer.png"></a>
-            <a href="#"><img src="/Picture/gmail.png"></a>
-            <a href="#"><img src="/Picture/facebook.png"></a>
-            <a href="#"><img src="/Picture/line.png"></a>
+            <a href="#"><img src="../Picture/printer.png"></a>
+            <a href="#"><img src="../Picture/gmail.png"></a>
+            <a href="#"><img src="../Picture/facebook.png"></a>
+            <a href="#"><img src="../Picture/line.png"></a>
           </div>
         </div>
         <div class="footer-2">
@@ -247,8 +246,8 @@
             กลุ่มสำหรับติดต่อแลกเปลี่ยน<br>
             ความคิดเห็นสำหรับสมาชิกเกษตรกร
             <div class="footer-3-3">
-              <img src="/Picture/line2.png">
-              <img src="/Picture/line2.png">
+              <img src="../Picture/line2.png">
+              <img src="../Picture/line2.png">
             </div>
           </div>
         </div>

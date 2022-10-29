@@ -2,6 +2,6 @@
     session_start(); 
     $_SESSION = NULL;
     session_destroy(); 
-    header("Location: ../Home_page.php");
+    header("Location: ../Page/Home_page.php?id=");
     exit();
 ?> 

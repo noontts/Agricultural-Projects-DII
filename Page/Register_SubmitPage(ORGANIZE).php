@@ -28,11 +28,11 @@
                     </div>
                     <div class="container" id="Text2">
                         <label>ประเภทขององค์กร</label><br>
-                        <input type="text" name="or_type"><br>
+                        <input type="text" name="type"><br>
                     </div>
                     <div class="container" id="Text2">
                         <label>ขนาดขององค์กร</label><br>
-                        <input type="text" name="or_size"><br>
+                        <input type="text" name="size"><br>
                     </div>
                     <div class="container" id="Mail">
                         <label>อีเมลล์</label><br>
