@@ -10,17 +10,14 @@
 }
 .box{
     background-color: #EBEBEB;
+    text-align: center;
 }
-.profilePic{
-    width: 400px;
-    height: 400px;
+.box img{
+    width: 350px;
+    height: 350px;
     border: none;
     transition: 0.5s;
     color: white;
-    background-image: url("../Picture/profilepicExample.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     cursor: pointer;
 }
 .profilePic:hover{
