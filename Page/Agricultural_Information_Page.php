@@ -26,15 +26,19 @@
       AND $rows2 = mysqli_fetch_assoc($query2)) {
   ?>
 
-        <form action="../php_data/personal_editor.php?id=<?php echo $uid; ?>" method="post">
+        <form action="../php_data/personal_editor.php?id=<?php echo $uid; ?>" method="POST" enctype="multipart/form-data">>
         <div class="mainContent">
             <div class="section" id="sec1">
               <div class="box" id="Profile">
-                <button class="profilePic" data-hover1="ปรับแต่งโปรไฟล์"></button>
+                <?php
+                $imageURL = 'images/'.$rows2['fm_img'];
+                ?>
+                <img src="../php_data/images/<?php echo $rows2['fm_img']; ?>" alt="" width="100%">
+                  <input type="file" name="file">
+                  <p style="font-size: 12px; padding:0;"><b>NOTE : </b>Only JPG , JPEG & PNG File are allowed to upload</p>
               </div>
               <button class="Submit">ยืนยัน</button>
             </div>
-
           <div class="section" id="sec1">
             <div class="box" id="AccountInfo">
               <h2>ข้อมูลเกี่ยวกับบัญชี</h2>                

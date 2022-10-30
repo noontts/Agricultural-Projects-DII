@@ -12,19 +12,8 @@
 
   <?php include(__DIR__. "/Header.php")?>
 
-      <div class="header-farmer">
-        ข้อมูลเกษตรกร
-      </div>
-      <div class="farmer-content">
-        <div class="col-1">
-          <div class="section">
-            <div class="farmer-profile">
-              <img src="../Picture/farmer-profile.png" alt="" style="width:100%">
-              เกษตรกร
-          </div>
-          <div class="detail-farmer">
-
-              <?php 
+      
+  <?php 
                 $uid = $_SESSION['uid'];
                 $tableList = array('authsystem_demo', 'fm_personal_info', 'garden_info');
 
@@ -35,6 +24,16 @@
                 $sql_gd = "SELECT * FROM garden_info WHERE ID = '$uid'";
                 $rows3 = mysqli_fetch_assoc(mysqli_query($connect, $sql_gd));
               ?>
+      <div class="header-farmer">
+        ข้อมูลเกษตรกร
+      </div>
+      <div class="farmer-content">
+        <div class="col-1">
+          <div class="section">
+            <div class="farmer-profile">
+            <img src="../php_data/images/<?php echo $rows2['fm_img']; ?>" alt="" width="100%">
+          </div>
+          <div class="detail-farmer">
 
               <p>ชื่อ</p>
               <?php echo $rows2['fm_realname']; ?>

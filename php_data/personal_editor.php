@@ -11,6 +11,13 @@
     $user_tel = $_POST['uTel'];
     $user_line = $_POST['uLine'];
 
+
+    // File upload path
+    $targetDir = "images/";
+    $fileName = basename($_FILES["file"]["name"]);
+    $targetFilePath = $targetDir . $fileName;
+    move_uploaded_file($_FILES['file']['tmp_name'], $targetFilePath);
+
     $sql_auth = "UPDATE authsystem_demo SET username = '$user_name',
             email = '$user_email' WHERE ID = '$uid'";
     $query1 = mysqli_query($connect, $sql_auth);
@@ -21,10 +28,12 @@
                 fm_birth = '$user_birth',
                 fm_area = '$user_area',
                 fm_tel = '$user_tel',
-                fm_line = '$user_line'
+                fm_line = '$user_line',
+                fm_img = '".$fileName."'
                 WHERE ID = '$uid'"; 
 
-    $query2 = mysqli_query($connect, $sql_fm);
+$query2 = mysqli_query($connect, $sql_fm);
+
 
     header("Location: ../Page/All_agricultural_information_page.php?id=$uid");
 ?>
