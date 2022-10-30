@@ -106,26 +106,26 @@
               <!--slideshow end-->
               รายละเอียดของสวน
           </div>
-          <div class="table-detail">
+          <div class="table-detail1">
               <table>
                   <tr>
-                      <td class="table-head">ชื่อสวน</td>
+                      <td class="table-head1">ชื่อสวน</td>
                       <td><?php echo $rows3['gd_name']; ?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">ที่อยู่ </td>
+                      <td class="table-head1">ที่อยู่ </td>
                       <td><?php echo $rows3['gd_area']?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">ที่ดินแปลงนี้มีพื้นที่ประมาณ</td>
+                      <td class="table-head1">ที่ดินแปลงนี้มีพื้นที่ประมาณ</td>
                       <td><?php echo $rows3['gd_area_square'];?> ไร่</td>
                   </tr>
                   <tr>
-                      <td class="table-head">วิธีการปลูก</td>
+                      <td class="table-head1">วิธีการปลูก</td>
                       <td><?php echo $rows3['gd_treat']?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">รายละเอียด</td>
+                      <td class="table-head1">รายละเอียด</td>
                       <td><?php echo $rows3['gd_detail']?></td>
                   </tr>
                 </table>
@@ -178,26 +178,27 @@
               <!--slideshow end-->
               รายละเอียดของสวน
           </div>
-          <div class="table-detail">
+
+          <div class="table-detail2">
               <table>
                   <tr>
-                      <td class="table-head">ชื่อสวน</td>
+                      <td class="table-head2">ชื่อสวน</td>
                       <td>สวนลำไยลุงสง่า</td>
                   </tr>
                   <tr>
-                      <td class="table-head">ที่อยู่ </td>
+                      <td class="table-head2">ที่อยู่ </td>
                       <td>18 หมู่ 9 ศรีบัวบาน เมืองลำพูน ลำพูน 51000</td>
                   </tr>
                   <tr>
-                      <td class="table-head">ที่ดินแปลงนี้มีพื้นที่ประมาณ</td>
+                      <td class="table-head2">ที่ดินแปลงนี้มีพื้นที่ประมาณ</td>
                       <td>25 ไร่</td>
                   </tr>
                   <tr>
-                      <td class="table-head">วิธีการปลูก</td>
+                      <td class="table-head2">วิธีการปลูก</td>
                       <td>ผ่านมาตรฐานการผลิตทางการเกษตรที่ดีและเหมาะสม<br>(GAP)</td>
                   </tr>
                   <tr>
-                      <td class="table-head">รายละเอียด</td>
+                      <td class="table-head2">รายละเอียด</td>
                       <td>สมาชิกกลุ่มลำไยแปลงใหญ่ ต.ศรีบัวบาน</td>
                   </tr>
                 </table>
