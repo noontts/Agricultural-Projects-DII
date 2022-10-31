@@ -26,7 +26,7 @@
       AND $rows2 = mysqli_fetch_assoc($query2)) {
   ?>
 
-        <form action="../php_data/personal_editor.php?id=<?php echo $uid; ?>" method="POST" enctype="multipart/form-data">>
+        <form action="../php_data/personal_editor.php?id=<?php echo $uid; ?>" method="POST" enctype="multipart/form-data">
         <div class="mainContent">
             <div class="section" id="sec1">
               <div class="box" id="Profile">

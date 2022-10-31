@@ -16,7 +16,6 @@
         $uid = $_SESSION['uid']; 
         $sql = "SELECT * FROM garden_info WHERE ID ='$uid'";        
         $query = mysqli_query($connect, $sql);
-
         while($rows = mysqli_fetch_assoc($query)) {
     ?>
 

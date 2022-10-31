@@ -35,14 +35,14 @@
     height: 600px;
 }
 .column input{
-    margin: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 0px;
     border: none;
     width: 460px;
     height: 40px;
     border-radius: 8px;
 }
 .column textarea{
-    margin: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 0px;
     resize: none;
     width: 460px;
     height: 120px;
@@ -51,23 +51,24 @@
 }
 
 #col1 h2{
-    margin: 0px 0px 0px 0px;
-    padding: 50px 0px 0px 50px;
+    margin: 0px 0px 0px 125px;
+    padding: 50px 0px 0px 0px;
     color: black;
+    text-align: left;
 }
 #col1 p{
-    margin: 0px 0px 0px 0px;
-    padding: 50px 0px 0px 50px;
+    margin: 0px 0px 0px 125px;
+    padding: 50px 0px 0px 0px;
 }
 
 #col2 h2{
     margin: 0px 0px 0px 0px;
-    padding: 50px 0px 0px 50px;
+    padding: 50px 0px 0px 0px;
     color: #EBEBEB;
 }
 #col2 p{
-    margin: 0px 0px 0px 0px;
-    padding: 50px 0px 0px 50px;
+    margin: 0px 0px 0px 125px;
+    padding: 50px 0px 0px 0px;
 }
 
 #Profile{
@@ -79,11 +80,12 @@
     height: 490px;
 }
 #AccountInfo h2,p{
-    margin: 0px 0px 0px 0px;
-    padding: 35px 0px 0px 35px;
+    margin: 0px 0px 0px 50px;
+    padding: 35px 0px 0px 0px;
+    text-align: left;
 }
 #AccountInfo input{
-    margin: 0px 0px 0px 35px;
+    margin: 0px 0px 0px 0px;
     border: none;
     width: 460px;
     height: 40px;
@@ -95,15 +97,15 @@
 }
 #AccountInfo2 h2{
     margin: 0px 0px 0px 0px;
-    padding: 35px 0px 0px 35px;
+    padding: 35px 0px 0px 0px;
     color: #EBEBEB;
 }
 #AccountInfo2 p{
-    margin: 0px 0px 0px 0px;
-    padding: 35px 0px 0px 35px;
+    margin: 0px 0px 0px 45px;
+    padding: 35px 0px 0px 0px;
 }
 #AccountInfo2 input{
-    margin: 0px 0px 0px 35px;
+    margin: 0px 0px 0px 0px;
     border: none;
     width: 300px;
     height: 40px;
