@@ -6,43 +6,71 @@
     float: left;
 }
 #sec1{
-    margin: 0px 0px 0px 40px;
+    margin: 0px 0px 0px 50px;
 }
+
 .box{
     background-color: #EBEBEB;
-    text-align: center;
 }
-.box img{
-    width: 350px;
-    height: 350px;
+.box1{
+    background-color: #EBEBEB;
+    float: left;
+}
+#Profile{
+    width: 950px;
+    height: 520px;
+    margin: 0px 20px 0px 0px;
+}
+#SubProfile{
+    width: 210px;
+    height: 210px;
+    margin: 0px 7px 0px 0px;
+}
+.profilePic{
+    width: 950px;
+    height: 520px;
     border: none;
     transition: 0.5s;
     color: white;
+    background-image: url("/Picture/profilepicExample.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
-.profilePic:hover{
+.profilePic2{
+    width: 210px;
+    height: 210px;
+    border: none;
+    transition: 0.5s;
+    color: white;
+    background-color: aqua;
+    background-image: url("/Picture/profilepicExample.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.profilePic:hover, .profilePic2:hover{
     opacity: 50%;
     color: white;
 }
-.profilePic:hover::after{
-    content: attr(data-hover1);
-    font-size: 18px;
-    font-weight:bold;
-}
+
 .column{
     float: left;
     width: 715px;
     height: 600px;
 }
 .column input{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 50px;
     border: none;
     width: 460px;
     height: 40px;
     border-radius: 8px;
 }
 .column textarea{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 50px;
     resize: none;
     width: 460px;
     height: 120px;
@@ -51,45 +79,39 @@
 }
 
 #col1 h2{
-    margin: 0px 0px 0px 125px;
-    padding: 50px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 50px 0px 0px 50px;
     color: black;
-    text-align: left;
 }
 #col1 p{
-    margin: 0px 0px 0px 125px;
-    padding: 50px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 30px 0px 0px 50px;
+    text-align: justify;
 }
 
 #col2 h2{
     margin: 0px 0px 0px 0px;
-    padding: 50px 0px 0px 0px;
+    padding: 50px 0px 0px 50px;
     color: #EBEBEB;
 }
 #col2 p{
-    margin: 0px 0px 0px 125px;
-    padding: 50px 0px 0px 0px;
-}
-
-#Profile{
-    width: 400px;
-    height: 400px;
+    margin: 0px 0px 0px 0px;
+    padding: 30px 0px 0px 50px;
+    text-align: justify;
 }
 #AccountInfo{
     width: 550px;
     height: 490px;
 }
 #AccountInfo h2,p{
-    margin: 0px 0px 0px 50px;
-    padding: 35px 0px 0px 0px;
-    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 35px 0px 0px 35px;
 }
 #AccountInfo input{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 35px;
     border: none;
     width: 460px;
     height: 40px;
-    border-radius: 8px;
 }
 #AccountInfo2 {
     width: 380px;
@@ -97,30 +119,30 @@
 }
 #AccountInfo2 h2{
     margin: 0px 0px 0px 0px;
-    padding: 35px 0px 0px 0px;
+    padding: 35px 0px 0px 35px;
     color: #EBEBEB;
 }
 #AccountInfo2 p{
-    margin: 0px 0px 0px 45px;
-    padding: 35px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 35px 0px 0px 35px;
 }
 #AccountInfo2 input{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 35px;
     border: none;
     width: 300px;
     height: 40px;
-    border-radius: 8px;
 }
 #Personalnfo{
     margin: 50px 0px 50px 0px;
     width: 1430px;
     height: 600px;
 }
+
 .Submit{
     margin: 15px 0px 0px 0px ;
     text-align: center;
     transition: 0.4s;
-    width: 400px;
+    width: 427px;
     height: 75px;
     color: black;
     font-size: 36px;
