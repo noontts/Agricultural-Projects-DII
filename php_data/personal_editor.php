@@ -22,6 +22,7 @@
                 fm_area = '$user_area',
                 fm_tel = '$user_tel',
                 fm_line = '$user_line'
+                fm_img = 
                 WHERE ID = '$uid'"; 
 
     $query2 = mysqli_query($connect, $sql_fm);

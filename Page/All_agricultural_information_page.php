@@ -34,6 +34,8 @@
                 $rows2 = mysqli_fetch_assoc(mysqli_query($connect, $sql_fm));
                 $sql_gd = "SELECT * FROM garden_info WHERE ID = '$uid'";
                 $rows3 = mysqli_fetch_assoc(mysqli_query($connect, $sql_gd));
+                $sql_pd = "SELECT * FROM product_info WHERE ID = '$uid'";
+                $rows4 = mysqli_fetch_assoc(mysqli_query($connect, $sql_pd));
               ?>
 
               <p>ชื่อ</p>
@@ -52,10 +54,18 @@
               <?php echo $rows2['fm_tel']; ?>
           </div>
           <div class="button-detail">
-              <a href="../Page/Agricultural_Information_Page.php?id=<?php echo $_SESSION['uid']; ?>">
+            <?php
+                  if ((isset($_SESSION['save_uid']) AND $uid == $_SESSION['save_uid']) 
+                      OR empty($_SESSION['save_uid'])) {
+            ?>
+              <a href="../Page/Agricultural_Information_Page.php?id=<?php echo $uid; ?>">
                 <button class="update-detail">+  แก้ไขรายละเอียด</button>
               </a><br>
-              <button class="delete">ลบรายชื่อนี้ทิ้ง</button>
+              <a href="../php_data/remove_list.php?id=<?php echo $uid; ?>">
+              <button class="delete">ลบรายชื่อนี้ทิ้ง</button></a>
+            <?php
+                  }
+            ?>
           </div>
 
           </div>
@@ -129,8 +139,15 @@
                       <td><?php echo $rows3['gd_detail']?></td>
                   </tr>
                 </table>
-                <a href="../Page/Garden_information_Page.php?id=<?php echo $_SESSION['uid']; ?>">
-                <button class="edit-detail">+  แก้ไขรายละเอียด</button></a><br>
+                <?php
+                  if ((isset($_SESSION['save_uid']) AND $uid == $_SESSION['save_uid']) 
+                      OR empty($_SESSION['save_uid'])) {
+                ?>
+                  <a href="../Page/Garden_information_Page.php?id=<?php echo $_SESSION['uid']; ?>">
+                  <button class="edit-detail">+  แก้ไขรายละเอียด</button></a><br>
+                <?php
+                    }
+                ?>
           </div>
 
           </div>
@@ -176,32 +193,45 @@
                 <!--manual navigation end-->
             </div>
               <!--slideshow end-->
-              รายละเอียดของสวน
+              รายละเอียดของผลผลิต
           </div>
           <div class="table-detail">
               <table>
                   <tr>
-                      <td class="table-head">ชื่อสวน</td>
-                      <td>สวนลำไยลุงสง่า</td>
+                      <td class="table-head">ประเภทผลผลิต</td>
+                      <td><?php echo $rows4['pd_type']; ?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">ที่อยู่ </td>
-                      <td>18 หมู่ 9 ศรีบัวบาน เมืองลำพูน ลำพูน 51000</td>
+                      <td class="table-head">จำนวนที่ได้ต่อครั้งที่เก็บ</td>
+                      <td><?php echo $rows4['pd_harvest']; ?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">ที่ดินแปลงนี้มีพื้นที่ประมาณ</td>
-                      <td>25 ไร่</td>
+                      <td class="table-head">ราคาต่อหน่วย</td>
+                      <td><?php echo $rows4['pd_per_each']; ?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">วิธีการปลูก</td>
-                      <td>ผ่านมาตรฐานการผลิตทางการเกษตรที่ดีและเหมาะสม<br>(GAP)</td>
+                      <td class="table-head">วันที่เก็บผลผลิต</td>
+                      <td><?php echo $rows4['pd_harvest_day']; ?></td>
                   </tr>
                   <tr>
-                      <td class="table-head">รายละเอียด</td>
-                      <td>สมาชิกกลุ่มลำไยแปลงใหญ่ ต.ศรีบัวบาน</td>
+                      <td class="table-head">ราคา</td>
+                      <td><?php echo $rows4['pd_price']; ?></td>
+                  </tr>
+                  <tr>
+                      <td class="table-head">คำอธิบาย</td>
+                      <td><?php echo $rows4['pd_detail']; ?></td>
                   </tr>
                 </table>
-                <button class="edit-detail">+  แก้ไขรายละเอียด</button>
+                <?php
+                  if ((isset($_SESSION['save_uid']) AND $uid == $_SESSION['save_uid']) 
+                      OR empty($_SESSION['save_uid'])) {
+                ?>
+                  <a href="../Page/Product_information_Page.php?id=<?php echo $_SESSION['uid']; ?>">
+                  <button class="edit-detail">+  แก้ไขรายละเอียด</button></a>
+                <?php
+                    }
+                ?>
+                
           </div>
             
           </div>

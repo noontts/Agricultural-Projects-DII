@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="/css/main.css">
-    <link type="text/css" rel="stylesheet" href="/css/Activity_page.css">
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
+    <link type="text/css" rel="stylesheet" href="../css/Activity_page.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
 </head>
+
+    <?php include(__DIR__. "/Header.php")?>
+    <?php 
+                $uid = $_SESSION['uid'];
+                $tableList = array('authsystem_demo', 'fm_personal_info', 'garden_info');
+
+                $sql_auth = "SELECT email FROM authsystem_demo WHERE ID = '$uid'";
+                $rows1 = mysqli_fetch_assoc(mysqli_query($connect, $sql_auth));
+                $sql_fm = "SELECT * FROM fm_personal_info WHERE ID = '$uid'";
+                $rows2 = mysqli_fetch_assoc(mysqli_query($connect, $sql_fm));
+              ?>
 <body>
     <div class="navbar">
         <div class="lang">
@@ -49,16 +60,16 @@
       <input type="radio" name="radio-btn2" id="radio12">
       <input type="radio" name="radio-btn2" id="radio13">
       <div class="slide first">
-        <img src="/Picture/pic5.png" alt="">
+        <img src="../Picture/pic5.png" alt="">
       </div>
       <div class="slide">
-        <img src="/Picture/pic1.jpg" alt="">
+        <img src="../Picture/pic1.jpg" alt="">
       </div>
       <div class="slide">
-       <img src="/Picture/pic2.jpg" alt="">
+       <img src="../Picture/pic2.jpg" alt="">
       </div>
       <div class="slide">
-       <img src="/Picture/pic3.jpg" alt="">
+       <img src="../Picture/pic3.jpg" alt="">
       </div>
       <!--Aumomatic navigation start-->
       <div class="auto-navigation2">
@@ -99,13 +110,13 @@
                     <div class="row" id="headerRow"><h2>ข้อมูลพื้นฐาน</h2></div>
                     <div class="section">
                     <h4>ชื่อ</h4>
-                    <p>Display name</p>
+                    <p><?php echo $rows2['fm_realname'];?></p>
                     <h4>เลขประจำตัวประชาชน</h4>
-                    <p>Display ID</p>
+                    <p><?php echo $rows2['fm_nation_id'];?></p>
                     <h4>ที่อยู่</h4>
-                    <p>Display Location</p>
+                    <p><?php echo $rows2['fm_realname'];?></p>
                     <h4>วันเกิด</h4>
-                    <p>Display date of brith</p>
+                    <p><?php echo $rows2['fm_realname'];?></p>
                     <h4>อีเมล</h4>
                     <p>Display email</p>
                     <h4>ไลน์ไอดี</h4>
@@ -132,16 +143,16 @@
                          <input type="radio" name="radio-btn" id="radio3">
                          <input type="radio" name="radio-btn" id="radio4">
                          <div class="slide first">
-                           <img src="/Picture/pic5.png" alt="">
+                           <img src="../Picture/pic5.png" alt="">
                          </div>
                          <div class="slide">
-                           <img src="/Picture/pic1.jpg" alt="">
+                           <img src="../Picture/pic1.jpg" alt="">
                          </div>
                          <div class="slide">
-                          <img src="/Picture/pic2.jpg" alt="">
+                          <img src="../Picture/pic2.jpg" alt="">
                          </div>
                          <div class="slide">
-                          <img src="/Picture/pic3.jpg" alt="">
+                          <img src="../Picture/pic3.jpg" alt="">
                          </div>
                          <!--Aumomatic navigation start-->
                          <div class="auto-navigation">
@@ -208,10 +219,10 @@
            ช่องทางติดตามข่าวสาร
           </div>
           <div class="footer-1-4">
-            <a href="#"><img src="/Picture/printer.png"></a>
-            <a href="#"><img src="/Picture/gmail.png"></a>
-            <a href="#"><img src="/Picture/facebook.png"></a>
-            <a href="#"><img src="/Picture/line.png"></a>
+            <a href="#"><img src="../Picture/printer.png"></a>
+            <a href="#"><img src="../Picture/gmail.png"></a>
+            <a href="#"><img src="../Picture/facebook.png"></a>
+            <a href="#"><img src="../Picture/line.png"></a>
           </div>
         </div>
         <div class="footer-2">
@@ -228,8 +239,8 @@
             กลุ่มสำหรับติดต่อแลกเปลี่ยน<br>
             ความคิดเห็นสำหรับสมาชิกเกษตรกร
             <div class="footer-3-3">
-              <img src="/Picture/line2.png">
-              <img src="/Picture/line2.png">
+              <img src="../Picture/line2.png">
+              <img src="../Picture/line2.png">
             </div>
           </div>
         </div>

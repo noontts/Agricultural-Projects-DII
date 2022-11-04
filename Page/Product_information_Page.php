@@ -5,31 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="/css/Garden_information_Page.css">
-    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../css/Garden_information_Page.css">
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
 </head>
 
-<body>
-    <div class="navbar">
-        <div class="lang">
-          <ul class="lang">
-            <li><a href="">TH</a></li>
-            <li><a href="">EN</a></li>
-            <li><a href="">CN</a></li>
-          </ul>
-        </div>
-        <div class="menu">
-              <ul>
-                  <li><a href="/Home_page.html">หน้าแรก</a></li>
-                  <li><a href="">เกี่ยวกับ</a></li>
-                  <li><a href="">ผลผลิต</a></li>
-                  <li><a href="">รายจ่าย</a></li>
-                  <li><a href="">กิจกรรม</a></li>
-                  <li><a href="/Page/LoginPage.html"><button class="miniProfile">Login</button></a></li>
-              </ul>
-            </div>
-      </div>
+<?php include(__DIR__. "/Header.php")?>
+
+<?php
+        $uid = $_SESSION['uid']; 
+        $sql = "SELECT * FROM product_info WHERE ID ='$uid'";        
+        $query = mysqli_query($connect, $sql);
+
+        while($rows = mysqli_fetch_assoc($query)) {
+?>
+    <form method="post" action="../php_data/product_editor.php?id=<?php echo $uid; ?>">
       <div class="mainContent">
         <div class="section" id="sec1">
             <div class="box1" id="Profile">
@@ -51,30 +41,30 @@
             <div class="box" id="Personalnfo">
                 <div class="column" id="col1">
                     <h2>ข้อมูลผลผลิต</h2>
-                    <form>
                         <p>ประเภทของผลผลิต</p>
-                        <input type="text">
+                        <input type="text" name="pType" value="<?php echo $rows['pd_type'];?>">
                         <p>จำนวนที่ได้ต่อครั้งที่เก็บ</p>
-                        <input type="text">
+                        <input type="text" name="pHarvest" value="<?php echo $rows['pd_harvest'];?>">
                         <p>ราคาต่อหน่วย</p>
-                        <input type="text">
+                        <input type="text" name="pPeach" value="<?php echo $rows['pd_per_each'];?>">
                         <p>วันที่เก็บผลผลิต</p>
-                        <input type="text">
-                      
-                    </form>
+                        <input type="text" name="pHarveDay" value="<?php echo $rows['pd_harvest_day'];?>">
                 </div>
                 <div class="column" id="col2">
                     <h2>ข้อมูลส่วนบุลคล</h2>
                     <form>
                       <p>ราคา</p>
-                        <input type="text">
+                      
+                      <input type="text" name="pPrice" value="<?php echo $rows['pd_price'];?>">
                       <p>รายละเอียด</p>
-                      <textarea id="subject" name="subject" placeholder="เขียนบางอย่าง..."></textarea>
+                      <textarea id="subject" name="pDetail" placeholder="เขียนบางอย่าง..."><?php echo $rows['pd_detail'];?></textarea>
                     </form>
                 </div>
             </div>
         </div>
       </div>
+    </form> <?php } ?>
+    
       <div class="footer">
         <div class="footer-1">
           <div class="footer-1-1">
@@ -90,10 +80,10 @@
            ช่องทางติดตามข่าวสาร
           </div>
           <div class="footer-1-4">
-            <a href="#"><img src="/Picture/printer.png"></a>
-            <a href="#"><img src="/Picture/gmail.png"></a>
-            <a href="#"><img src="/Picture/facebook.png"></a>
-            <a href="#"><img src="/Picture/line.png"></a>
+            <a href="#"><img src="../Picture/printer.png"></a>
+            <a href="#"><img src="../Picture/gmail.png"></a>
+            <a href="#"><img src="../Picture/facebook.png"></a>
+            <a href="#"><img src="../Picture/line.png"></a>
           </div>
         </div>
         <div class="footer-2">
@@ -110,8 +100,8 @@
             กลุ่มสำหรับติดต่อแลกเปลี่ยน<br>
             ความคิดเห็นสำหรับสมาชิกเกษตรกร
             <div class="footer-3-3">
-              <img src="/Picture/line2.png">
-              <img src="/Picture/line2.png">
+              <img src="../Picture/line2.png">
+              <img src="../Picture/line2.png">
             </div>
           </div>
         </div>

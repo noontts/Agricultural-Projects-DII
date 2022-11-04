@@ -20,8 +20,8 @@
         $id = $rows['ID'];
         $_SESSION['userStatus'] = 
         "
-            <a href=\"../php_data/logout.php\">
-                <button class=\"miniLogOutProfile\" type=\"Submit\">Logout</button>
+            <a href=\"../Page/User_account.php?id=$id\">
+                <button class=\"miniLogOutProfile\" type=\"Submit\">เมนูผู้ใช้</button>
             </a>
         ";
 

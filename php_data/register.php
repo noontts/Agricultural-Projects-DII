@@ -113,15 +113,16 @@
                     
                     if ($user_type == "farmer_role") 
                     { 
-                        $tableValue = array("'$uid', '$fm_realname'", $uid);
-                        $tableName = array("fm_personal_info(ID, fm_realname)", "garden_info(ID)");
+                        $tableValue = array("'$uid', '$fm_realname'", $uid, $uid);
+                        $tableName = array("fm_personal_info(ID, fm_realname)", "garden_info(ID)","product_info(ID)");
                         generate_userdb($tableValue, $tableName, $connect); 
                     }
 
                     else if ($user_type == "organize_role") 
                     { 
-                        generate_userdb("'$uid', '$or_type', '$or_size'", 
-                        "or_personal_info(ID, or_type, or_size)", $connect);
+                        $tableValue = array("'$uid', '$or_type', '$or_size'");
+                        $tableName = array("or_personal_info(ID, or_type, or_size)");
+                        generate_userdb($tableValue, $tableName, $connect);
                     }
 
                     header( 'Location: ../Page/LoginPage.php');
