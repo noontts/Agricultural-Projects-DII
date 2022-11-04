@@ -1,5 +1,17 @@
 .information-content{
-    display: flex;
+    background-color: none;
+    float: left;
+}
+#info1{
+    background-color: none;
+    margin: 10px 0px 0px 0px;
+}
+#info2{
+    background-color: none;
+}
+#info3{
+    background-color: none;
+    margin: 20px 0px 15px 495px;
 }
 .government{
     width: 363px;
@@ -29,7 +41,7 @@
     font-size: 20px;
 }
 .search{
-    margin-left: 363px;
+    margin-left: 405px;
     display: flex;
 }
 input[type=text]{
@@ -60,44 +72,7 @@ input[type=text]{
 .button:hover{
     color: white;
 }
-.gardener-content{
-    background-color: #F7F7F7;
-    margin-left: 10px;
-}
-.gardener-card{
-    width: 284px;
-    height: 341px;
-    box-shadow: 8px 12px 24px -12px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    background-color: #FFFF;
-}
-.gardener-container{
-    padding-left: 12px;
-    text-align: left;
-    font-size: 20px;
-}
-.gardener-container span{
-    font-weight: bold;
-}
-.gardener-card img{
-    width: 279px;
-    height: 223px;
-}
-.gardener-button{
-    margin-left: auto; 
-    margin-right: 10px;
-    padding-top: 5px;
-    text-align: center;
-    width: 81px;
-    height: 31px;
-    background-color: #F5F5F5;
-    border-radius: 10px;
-}
-.gardener-container a{
-    text-decoration: none;
-    color: #494949;
-    font-size: 16px;
-}
+
 .nav-num{
     display: flex;
     justify-content: center;
@@ -120,26 +95,60 @@ input[type=text]{
     text-decoration: none;
     color: black;
 }
-.gardener-1,.gardener-2,.gardener-3{
+.viewButton{
+    text-transform: uppercase;
+    color: #A0C334;
+    border: none;
+    background: none;
+    font-size: 14px;
+    padding: 0px 5px 0px 0px;
+    cursor: pointer;
+}
+
+.gardener-content{
+    margin: 10px auto 0px 0px;
+    height: 100%;
+    width: 100%;
+}
+.gardener-profile{
     display: flex;
-    margin-top: 16px;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: auto;
+    line-break: auto;
+    margin: 10px 0px 0px 13.3%;
 }
-.gardener-1{
-    margin-top: 33px;
-    padding-top: 16px;
+.gardener-card{
+    width: 285px;
+    height: 360px;
+    margin: 25px 25px 0px 0px;
+    box-shadow: 8px 12px 24px -12px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: #FFFF;
+    
 }
-.gardener-3{
-    margin-bottom: 28px;
+.gardener-container{
+    padding-left: 12px;
+    text-align: left;
+    font-size: 20px;
 }
-.gardener-1-1,.gardener-1-2,.gardener-1-3{
-    margin-right: 10px;
+.gardener-container span{
+    font-weight: bold;
 }
-.gardener-2-1,.gardener-2-2,.gardener-2-3{
-    margin-right: 10px;
+.gardener-card img{
+    width: 285px;
+    height: fit-content;
 }
-.gardener-3-1,.gardener-3-2,.gardener-3-3{
-    margin-right: 10px;
+.gardener-button{
+    margin: 0px 25px 0px auto;
+    text-align: center;
+    width: 81px;
+    height: 30px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
 }
-.gardener-1-1,.gardener-2-1,.gardener-3-1{
-    margin-left: 60px;
+.gardener-container a{
+    text-decoration: none;
+    color: #494949;
+    font-size: 16px;
 }

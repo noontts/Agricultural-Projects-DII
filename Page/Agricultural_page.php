@@ -80,7 +80,11 @@
                     </div>
                 </div>
             </div>
-            <div class="gardener">
+          </div>
+      </div>
+          
+            
+            <div class="information-content" id="info1">
                 <div class="search-bar">
                     <div class="search">
                         <input type="text" name="" placeholder="ค้นหาสวนที่คุณต้องการได้ที่นี่ ....">
@@ -89,53 +93,61 @@
                         </form>
                     </div>
                 </div>
-                <div class="gardener-content">
-                    <div class="gardener-profile">
 
-                            <?php
-                                $sql_gd = "SELECT * FROM garden_info";
-                                $query1 = mysqli_query($connect, $sql_gd);
-                                $hCount = 1; $rCount = 1;
 
-                                while ($rows = mysqli_fetch_assoc($query1)) {
-                                    $gdName = $rows['gd_name'];
-                                    $save_uid = $_GET['id'];
-                                    $rows_id = $rows['ID'];
-                                    $sql_auth = "SELECT * FROM authsystem_demo WHERE ID = '$rows_id'";
-                                    $query2 = mysqli_query($connect, $sql_auth);
-                                    $rows2 = mysqli_fetch_assoc($query2);
+              <div class="information-content" id="info2">
+                    <div class="gardener-content">
+                          <div class="gardener-profile">
+                              <?php
+                                      $sql_gd = "SELECT * FROM garden_info";
+                                      $query1 = mysqli_query($connect, $sql_gd);
+                                      
+                                      
+                                        while ($rows = mysqli_fetch_assoc($query1)) {
+                                          $gdName = $rows['gd_name'];
+                                          $save_uid = $_GET['id'];
+                                          $rows_id = $rows['ID'];
+                                          $sql_auth = "SELECT * FROM authsystem_demo WHERE ID = '$rows_id'";
+                                          $query2 = mysqli_query($connect, $sql_auth);
+                                          $rows2 = mysqli_fetch_assoc($query2);
 
-                                        echo "<div class=\"garden-".$hCount."\">";
-                                        echo "
-                                                <div class=\"gardener-".$hCount."-".$rCount."\">
-                                                    <div class=\"gardener-card\">
-                                                    <img src=\"../Picture/profile-card.png\">
-                                                        <div class=\"gardener-container\">
-                                                            <span>".$gdName."<br></span>"
-                            ?>                                  
-                                                            <form action="../Page/All_agricultural_information_page.php?id=<?php echo $rows['ID']; ?>" method="post">
-                                                            <input type="Submit" value="<?php echo $rows2['username']; ?>"></form><br>
-                                                            <a href=""><div class="gardener-button">สำรวจ</div></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                            <?php                    
-                                        echo "</div>";
-                                        $_SESSION['save_uid'] = $save_uid;
-                                }
-                            ?>
+                                          echo 
+                                          "<div class=\"gardener-card\">
+                                          <img src=\"../Picture/profile-card.png\">
+                                          <div class=\"gardener-container\"> 
+                                          <span>".$gdName."<br></span>";
+                              ?>
+                                              <form action="../Page/All_agricultural_information_page.php?id=<?php echo $rows['ID']; ?>" method="post">
+                                              <input type="Submit" class="viewButton" value="<?php echo $rows2['username']; ?>"></form><br>
+                                              <a href=""><div class="gardener-button">สำรวจ</div></a>
+                              <?php
+                                          echo "</div></div>";
+                                      }
+                              ?>               
+                                        
+                                  </div>
+                              </div>
+                              </div>
+                          <?php                    
+                              $_SESSION['save_uid'] = $save_uid;
+                            
+                          ?>
 
-                        <div class="nav-num">
-                            <a href="#"><div class="num-1">1</div></a>
-                            <a href="#"><div class="num-1">2</div></a>
-                            <a href="#"><div class="num-1">3</div></a>
-                            <a href="#"><div class="num-1">...</div></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="information-content" id="info3">
+                   <div class="nav-num">
+                                  <a href="#"><div class="num-1">1</div></a>
+                                  <a href="#"><div class="num-1">2</div></a>
+                                  <a href="#"><div class="num-1">3</div></a>
+                                  <a href="#"><div class="num-1">...</div></a>
+                  </div>              
+            
+             </div>
+
+
       <div class="footer">
         <div class="footer-1">
           <div class="footer-1-1">
